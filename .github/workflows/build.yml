@@ -1,39 +1,44 @@
-name: Build CleanSuite macOS App
+name: Build & Release CleanSuite
 
 on:
   push:
-    branches: [ main ]
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-15-arm64
 
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Select Xcode
-      run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
-    - name: Build macOS App
-      run: |
-        xcodebuild -project CleanSuite/CleanSuite.xcodeproj \
-          -scheme CleanSuite \
-          -configuration Release \
-          -derivedDataPath build
+      - name: Build CleanSuite
+        run: |
+          xcodebuild -project CleanSuite/CleanSuite.xcodeproj \
+            -scheme CleanSuite \
+            -configuration Release \
+            -derivedDataPath build
 
-    - name: Package .app into .pkg
-      run: |
-        mkdir -p package_root/Applications
-        cp -R build/Build/Products/Release/CleanSuite.app package_root/Applications/
-        pkgbuild --root package_root \
-          --identifier com.wedo.cleansuite \
-          --version 1.2.1 \
-          CleanSuite-Installer.pkg
+      - name: Create PKG
+        run: |
+          cd build/Build/Products/Release
+          productbuild \
+            --component CleanSuite.app /Applications \
+            CleanSuite.pkg
 
-    - name: Upload Release
-      uses: softprops/action-gh-release@v1
-      with:
-        tag_name: v1.2.1
-        files: CleanSuite-Installer.pkg
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+      - name: Upload Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        with:
+          files: |
+            build/Build/Products/Release/CleanSuite.pkg
+          draft: false
+          prerelease: false
