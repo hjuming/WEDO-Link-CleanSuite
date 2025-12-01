@@ -15,6 +15,7 @@ pkg/
 dist/
 out/
 build/
+!build/root/
 
 # Python Cache
 __pycache__/
