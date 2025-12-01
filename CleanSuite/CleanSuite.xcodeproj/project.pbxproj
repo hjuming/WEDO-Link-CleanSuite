@@ -1,365 +1,240 @@
-// !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		719F91B97ADA4B4C88D88B1D /* CleanSuiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE83090017E406894E51228 /* CleanSuiteApp.swift */; };
-		3D1CA79001D6412FBEBA004D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356ED12AC139455889E0F509 /* ContentView.swift */; };
-		D5C61258B1D544FC8C4DC132 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB6F1C3CA614D1D95C8EB9D /* DashboardView.swift */; };
-		F4036388509D45738BE0EC1F /* QuickCleanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3CB203840D4C8AA4296740 /* QuickCleanView.swift */; };
-		509FDE28F05B45AAA1DEA81B /* DeepCleanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FEE454A32E469884354A0D /* DeepCleanView.swift */; };
-		362D81FDA8F34977B23E98F8 /* MailCleanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D26C0BAEA1A4614AA64C2EB /* MailCleanView.swift */; };
-		8AEEFE5464BE4604B1ACED42 /* LINECleanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DCD4D9009B43EAA170C4B7 /* LINECleanView.swift */; };
-		7E52B4758ACA45CA83DBD619 /* BrowserCleanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F938DB3390406DB64B38C2 /* BrowserCleanView.swift */; };
-		0FBBE93507344EA38D66441F /* SchedulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5F08250D84DD38AB95B43 /* SchedulerView.swift */; };
-		3944D78343A4459BAB076C4C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CE3F1DB18C4B889E647A97 /* SettingsView.swift */; };
-		2CE798A78A8A4DCFB832C0B1 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = D855D264C8C64742A1F541F5 /* Shared.swift */; };
-		8CC8A9F01C9F4D2080BF7257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC020996050744F68FFDF73F /* Assets.xcassets */; };
-		54BA12340F6641D2B0FE0683 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 117D3A4CC3DC42CBA4B0B15C /* Info.plist */; };
+		APP_CLEANFILE_CleanSuiteApp = {isa = PBXBuildFile; fileRef = FILE_CleanSuiteApp; };
+		APP_CLEANFILE_ContentView = {isa = PBXBuildFile; fileRef = FILE_ContentView; };
+		APP_CLEANFILE_DashboardView = {isa = PBXBuildFile; fileRef = FILE_DashboardView; };
+		APP_CLEANFILE_QuickCleanView = {isa = PBXBuildFile; fileRef = FILE_QuickCleanView; };
+		APP_CLEANFILE_DeepCleanView = {isa = PBXBuildFile; fileRef = FILE_DeepCleanView; };
+		APP_CLEANFILE_BrowserCleanView = {isa = PBXBuildFile; fileRef = FILE_BrowserCleanView; };
+		APP_CLEANFILE_MailCleanView = {isa = PBXBuildFile; fileRef = FILE_MailCleanView; };
+		APP_CLEANFILE_LINECleanView = {isa = PBXBuildFile; fileRef = FILE_LINECleanView; };
+		APP_CLEANFILE_SchedulerView = {isa = PBXBuildFile; fileRef = FILE_SchedulerView; };
+		APP_CLEANFILE_SettingsView = {isa = PBXBuildFile; fileRef = FILE_SettingsView; };
+
+		APP_CLEANFILE_Shared = {isa = PBXBuildFile; fileRef = FILE_Shared; };
+		APP_CLEANFILE_Helper = {isa = PBXBuildFile; fileRef = FILE_Helper; };
+
+		APP_CLEANFILE_Assets = {isa = PBXBuildFile; fileRef = FILE_Assets; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC7EB9945D2C424AAC0A551A /* CleanSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CE83090017E406894E51228 /* CleanSuiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CleanSuiteApp.swift"; sourceTree = "<group>"; };
-		356ED12AC139455889E0F509 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
-		FCB6F1C3CA614D1D95C8EB9D /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardView.swift"; sourceTree = "<group>"; };
-		EF3CB203840D4C8AA4296740 /* QuickCleanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickCleanView.swift"; sourceTree = "<group>"; };
-		73FEE454A32E469884354A0D /* DeepCleanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeepCleanView.swift"; sourceTree = "<group>"; };
-		7D26C0BAEA1A4614AA64C2EB /* MailCleanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MailCleanView.swift"; sourceTree = "<group>"; };
-		37DCD4D9009B43EAA170C4B7 /* LINECleanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LINECleanView.swift"; sourceTree = "<group>"; };
-		41F938DB3390406DB64B38C2 /* BrowserCleanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowserCleanView.swift"; sourceTree = "<group>"; };
-		EBF5F08250D84DD38AB95B43 /* SchedulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchedulerView.swift"; sourceTree = "<group>"; };
-		30CE3F1DB18C4B889E647A97 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView.swift"; sourceTree = "<group>"; };
-		D855D264C8C64742A1F541F5 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shared.swift"; sourceTree = "<group>"; };
-		CC020996050744F68FFDF73F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
-		117D3A4CC3DC42CBA4B0B15C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
+		FILE_CleanSuiteApp = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSuiteApp.swift; };
+		FILE_ContentView = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; };
+		FILE_DashboardView = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; };
+		FILE_QuickCleanView = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCleanView.swift; };
+		FILE_DeepCleanView = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepCleanView.swift; };
+		FILE_BrowserCleanView = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserCleanView.swift; };
+		FILE_MailCleanView = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailCleanView.swift; };
+		FILE_LINECleanView = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LINECleanView.swift; };
+		FILE_SchedulerView = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerView.swift; };
+		FILE_SettingsView = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; };
+
+		FILE_Shared = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; };
+		FILE_Helper = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; };
+
+		FILE_InfoPlist = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; };
+		FILE_Assets = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; };
+
+		FILE_Product = {isa = PBXFileReference; explicitFileType = wrapper.application; path = CleanSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		40531592C845451EB1E87E0F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		7333670E6B214C52BBDE39C7 = {
+		GROUP_MAIN = {
 			isa = PBXGroup;
 			children = (
-				5658F2BEB45E434DBB6DF322 /* CleanSuiteApp */,
-				FE757804D0214D8CB23187BF /* shared */,
-				CA4822150BE2465CAF84CB83 /* Products */,
+				GROUP_APP,
+				GROUP_SHARED,
+				GROUP_HELPER,
+				GROUP_PRODUCTS
 			);
 			sourceTree = "<group>";
 		};
-		5658F2BEB45E434DBB6DF322 /* CleanSuiteApp */ = {
+
+		GROUP_APP = {
 			isa = PBXGroup;
-			children = (
-				8CE83090017E406894E51228 /* CleanSuiteApp.swift */,
-				356ED12AC139455889E0F509 /* ContentView.swift */,
-				FCB6F1C3CA614D1D95C8EB9D /* DashboardView.swift */,
-				EF3CB203840D4C8AA4296740 /* QuickCleanView.swift */,
-				73FEE454A32E469884354A0D /* DeepCleanView.swift */,
-				7D26C0BAEA1A4614AA64C2EB /* MailCleanView.swift */,
-				37DCD4D9009B43EAA170C4B7 /* LINECleanView.swift */,
-				41F938DB3390406DB64B38C2 /* BrowserCleanView.swift */,
-				EBF5F08250D84DD38AB95B43 /* SchedulerView.swift */,
-				30CE3F1DB18C4B889E647A97 /* SettingsView.swift */,
-				CC020996050744F68FFDF73F /* Assets.xcassets */,
-				117D3A4CC3DC42CBA4B0B15C /* Info.plist */,
-			);
 			path = CleanSuiteApp;
+			children = (
+				FILE_CleanSuiteApp,
+				FILE_ContentView,
+				FILE_DashboardView,
+				FILE_QuickCleanView,
+				FILE_DeepCleanView,
+				FILE_BrowserCleanView,
+				FILE_MailCleanView,
+				FILE_LINECleanView,
+				FILE_SchedulerView,
+				FILE_SettingsView,
+				FILE_InfoPlist,
+				FILE_Assets
+			);
 			sourceTree = "<group>";
 		};
-		FE757804D0214D8CB23187BF /* shared */ = {
+
+		GROUP_SHARED = {
 			isa = PBXGroup;
-			children = (
-				D855D264C8C64742A1F541F5 /* Shared.swift */,
-			);
 			path = shared;
+			children = (
+				FILE_Shared
+			);
 			sourceTree = "<group>";
 		};
-		CA4822150BE2465CAF84CB83 /* Products */ = {
+
+		GROUP_HELPER = {
 			isa = PBXGroup;
+			path = CleanSuiteHelper;
 			children = (
-				EC7EB9945D2C424AAC0A551A /* CleanSuite.app */,
+				FILE_Helper
 			);
+			sourceTree = "<group>";
+		};
+
+		GROUP_PRODUCTS = {
+			isa = PBXGroup;
+			children = (FILE_Product);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F40D42473FDD4C278072EE3B /* CleanSuite */ = {
+		TARGET_APP = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D639C483945E47AD9628DBA6 /* Build configuration list for PBXNativeTarget "CleanSuite" */;
+			buildConfigurationList = TARGET_CONFIGS;
 			buildPhases = (
-				603E49C2C56245B890C4DC3F /* Sources */,
-				40531592C845451EB1E87E0F /* Frameworks */,
-				E664A134DF754EF8BB214C8C /* Resources */,
+				PHASE_SOURCES,
+				PHASE_RESOURCES
 			);
-			buildRules = (
-			);
-			dependencies = (
-			);
+			buildRules = ();
+			dependencies = ();
 			name = CleanSuite;
 			productName = CleanSuite;
-			productReference = EC7EB9945D2C424AAC0A551A /* CleanSuite.app */;
+			productReference = FILE_Product;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		80499C484E414CB997AAF96C /* Project object */ = {
+		PROJECT = {
 			isa = PBXProject;
-			attributes = {{
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
-				TargetAttributes = {
-					F40D42473FDD4C278072EE3B = {
-						CreatedOnToolsVersion = 14.2;
-					}};
-				};
+			attributes = {
+				LastUpgradeCheck = 1600;
+				ORGANIZATIONNAME = "WEDO";
 			};
-			buildConfigurationList = 3DF48B43DDA549FEB1A0F7D3 /* Build configuration list for PBXProject "CleanSuite" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = PROJECT_CONFIGS;
+			compatibilityVersion = "Xcode 16.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				"zh-Hant"
 			);
-			mainGroup = 7333670E6B214C52BBDE39C7;
-			productRefGroup = CA4822150BE2465CAF84CB83 /* Products */;
+			mainGroup = GROUP_MAIN;
+			productRefGroup = GROUP_PRODUCTS;
 			projectDirPath = "";
-			projectRoot = "";
 			targets = (
-				F40D42473FDD4C278072EE3B /* CleanSuite */,
+				TARGET_APP
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E664A134DF754EF8BB214C8C /* Resources */ = {
+		PHASE_RESOURCES = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
-				8CC8A9F01C9F4D2080BF7257 /* Assets.xcassets in Resources */,
-				54BA12340F6641D2B0FE0683 /* Info.plist in Resources */,
+				APP_CLEANFILE_Assets
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		603E49C2C56245B890C4DC3F /* Sources */ = {
+		PHASE_SOURCES = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
-				719F91B97ADA4B4C88D88B1D /* CleanSuiteApp.swift in Sources */,
-				3D1CA79001D6412FBEBA004D /* ContentView.swift in Sources */,
-				D5C61258B1D544FC8C4DC132 /* DashboardView.swift in Sources */,
-				F4036388509D45738BE0EC1F /* QuickCleanView.swift in Sources */,
-				509FDE28F05B45AAA1DEA81B /* DeepCleanView.swift in Sources */,
-				362D81FDA8F34977B23E98F8 /* MailCleanView.swift in Sources */,
-				8AEEFE5464BE4604B1ACED42 /* LINECleanView.swift in Sources */,
-				7E52B4758ACA45CA83DBD619 /* BrowserCleanView.swift in Sources */,
-				0FBBE93507344EA38D66441F /* SchedulerView.swift in Sources */,
-				3944D78343A4459BAB076C4C /* SettingsView.swift in Sources */,
-				2CE798A78A8A4DCFB832C0B1 /* Shared.swift in Sources */,
+				APP_CLEANFILE_CleanSuiteApp,
+				APP_CLEANFILE_ContentView,
+				APP_CLEANFILE_DashboardView,
+				APP_CLEANFILE_QuickCleanView,
+				APP_CLEANFILE_DeepCleanView,
+				APP_CLEANFILE_BrowserCleanView,
+				APP_CLEANFILE_MailCleanView,
+				APP_CLEANFILE_LINECleanView,
+				APP_CLEANFILE_SchedulerView,
+				APP_CLEANFILE_SettingsView,
+				APP_CLEANFILE_Shared,
+				APP_CLEANFILE_Helper
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		2739590AA1E74D49A5EBDB50 /* Debug */ = {
+		PROJECT_DEBUG = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx;
+				PRODUCT_NAME = CleanSuite;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		9B997BB9F0984CE789366CDA /* Release */ = {
+
+		PROJECT_RELEASE = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				SDKROOT = macosx;
+				PRODUCT_NAME = CleanSuite;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		C7863DDC86A844D7A1100583 /* Debug */ = {
+
+		TARGET_DEBUG = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "CleanSuiteApp/Preview Content";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = CleanSuiteApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = 1.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wedo.cleansuite;
+				INFOPLIST_FILE = "CleanSuiteApp/Info.plist";
 				PRODUCT_NAME = CleanSuite;
-				SKIP_INSTALL = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Debug;
 		};
-		6A40EAB3777445918CB3DEAC /* Release */ = {
+
+		TARGET_RELEASE = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "CleanSuiteApp/Preview Content";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = CleanSuiteApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MARKETING_VERSION = 1.2.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wedo.cleansuite;
+				INFOPLIST_FILE = "CleanSuiteApp/Info.plist";
 				PRODUCT_NAME = CleanSuite;
-				SKIP_INSTALL = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3DF48B43DDA549FEB1A0F7D3 /* Build configuration list for PBXProject "CleanSuite" */ = {
+		PROJECT_CONFIGS = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2739590AA1E74D49A5EBDB50 /* Debug */,
-				9B997BB9F0984CE789366CDA /* Release */,
+				PROJECT_DEBUG,
+				PROJECT_RELEASE
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D639C483945E47AD9628DBA6 /* Build configuration list for PBXNativeTarget "CleanSuite" */ = {
+
+		TARGET_CONFIGS = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C7863DDC86A844D7A1100583 /* Debug */,
-				6A40EAB3777445918CB3DEAC /* Release */,
+				TARGET_DEBUG,
+				TARGET_RELEASE
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 80499C484E414CB997AAF96C /* Project object */;
+	rootObject = PROJECT;
 }
