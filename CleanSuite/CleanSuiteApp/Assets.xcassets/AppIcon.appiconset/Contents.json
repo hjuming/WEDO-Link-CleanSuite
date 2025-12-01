@@ -1,10 +1,10 @@
 {
   "images": [
     {
-      "size": "1024x1024",
       "idiom": "mac",
-      "filename": "AppIcon.png",
-      "scale": "1x"
+      "size": "1024x1024",
+      "scale": "1x",
+      "filename": "AppIcon.png"
     }
   ],
   "info": {

@@ -1,28 +1,39 @@
-name: Build CleanSuite
+name: Build CleanSuite macOS App
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: macos-15
+    runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Select Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_16.4.app
+    - name: Select Xcode
+      run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
-      - name: Build CleanSuite App
-        run: |
-          swift build --configuration release
-      - name: Upload Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: nightly
-          name: Nightly Auto Build
-          files: build/Build/Products/Release/CleanSuite.app
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+    - name: Build macOS App
+      run: |
+        xcodebuild -project CleanSuite/CleanSuite.xcodeproj \
+          -scheme CleanSuite \
+          -configuration Release \
+          -derivedDataPath build
+
+    - name: Package .app into .pkg
+      run: |
+        mkdir -p package_root/Applications
+        cp -R build/Build/Products/Release/CleanSuite.app package_root/Applications/
+        pkgbuild --root package_root \
+          --identifier com.wedo.cleansuite \
+          --version 1.2.1 \
+          CleanSuite-Installer.pkg
+
+    - name: Upload Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v1.2.1
+        files: CleanSuite-Installer.pkg
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}

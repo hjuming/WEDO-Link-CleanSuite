@@ -1,42 +1,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var diskFree: Double = ProcessInfo.processInfo.physicalMemory // Placeholder
-    @State private var message = "歡迎使用 CleanSuite！"
+    @State private var output = "歡迎使用 CleanSuite！"
 
     var body: some View {
         VStack(spacing: 20) {
             Text("CleanSuite")
-                .font(.largeTitle)
-                .bold()
+                .font(.largeTitle.bold())
+            Text(output)
+                .foregroundStyle(.secondary)
 
-            Text(message)
-                .foregroundColor(.secondary)
+            Button("快速清理") { runCleaner("quick") }
+                .buttonStyle(.borderedProminent)
 
-            Button("執行快速清理") {
-                message = runCleaner("quick")
-            }
-            .buttonStyle(.borderedProminent)
-
-            Button("執行深度清理") {
-                message = runCleaner("deep")
-            }
-            .buttonStyle(.bordered)
+            Button("深度清理") { runCleaner("deep") }
+                .buttonStyle(.bordered)
 
             Spacer()
         }
         .padding()
     }
 
-    func runCleaner(_ type: String) -> String {
+    func runCleaner(_ type: String) {
         let task = Process()
-        task.launchPath = "/usr/local/bin/cleansuite"
+        task.executableURL = URL(fileURLWithPath: "/usr/local/bin/cleansuite")
         task.arguments = [type]
 
         let pipe = Pipe()
         task.standardOutput = pipe
-        task.launch()
+
+        try? task.run()
+
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        return String(data: data, encoding: .utf8) ?? "清理已完成"
+        output = String(data: data, encoding: .utf8) ?? "執行完成"
     }
 }
