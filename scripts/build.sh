@@ -33,11 +33,7 @@ cp scripts/Info.plist "$APP_BUNDLE/Contents/Info.plist"
 if [ -f "assets/icons/AppIcon.icns" ]; then
     cp "assets/icons/AppIcon.icns" "$APP_BUNDLE/Contents/Resources/AppIcon.icns"
 fi
-if [ -f "assets/icons/menubar_active.png" ]; then
-    cp "assets/icons/menubar_active.png" "$APP_BUNDLE/Contents/Resources/menubar_active.png"
-fi
-if [ -f "assets/icons/menubar_inactive.png" ]; then
-    cp "assets/icons/menubar_inactive.png" "$APP_BUNDLE/Contents/Resources/menubar_inactive.png"
-fi
+# Copy all PNG icons
+cp assets/icons/*.png "$APP_BUNDLE/Contents/Resources/"
 
 echo "Build Complete: $APP_BUNDLE"
