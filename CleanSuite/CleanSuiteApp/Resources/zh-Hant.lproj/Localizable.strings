@@ -1,0 +1,9 @@
+/* Localizable.strings */
+"Dashboard" = "儀表板";
+"Quick Clean" = "快速清理";
+"Deep Clean" = "深度清理";
+"Mail Clean" = "郵件清理";
+"Browser Clean" = "瀏覽器清理";
+"LINE Clean" = "LINE 清理";
+"Scheduler" = "排程";
+"Settings" = "設定";

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Launch the app after installation
-open "/Applications/WEDO Link CleanSuite.app"
-
-# Send notification
-osascript -e 'display notification "Installation Complete" with title "WEDO Link CleanSuite"'
-
-exit 0

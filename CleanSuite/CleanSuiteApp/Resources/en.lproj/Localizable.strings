@@ -1,0 +1,9 @@
+/* Localizable.strings */
+"Dashboard" = "Dashboard";
+"Quick Clean" = "Quick Clean";
+"Deep Clean" = "Deep Clean";
+"Mail Clean" = "Mail Clean";
+"Browser Clean" = "Browser Clean";
+"LINE Clean" = "LINE Clean";
+"Scheduler" = "Scheduler";
+"Settings" = "Settings";

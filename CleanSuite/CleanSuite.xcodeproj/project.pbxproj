@@ -1,0 +1,2 @@
+// This is a placeholder project file.
+// Please open the folder 'CleanSuite' in Xcode to use the Swift Package structure.

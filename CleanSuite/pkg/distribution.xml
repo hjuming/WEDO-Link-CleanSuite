@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="2">
+    <title>CleanSuite</title>
+    <options customize="never" require-scripts="false"/>
+    <domains enable_anywhere="true" enable_currentUserHome="true" enable_localSystem="true"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="com.wedo.cleansuite.app"/>
+            <line choice="com.wedo.cleansuite.cli"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.wedo.cleansuite.app" visible="false">
+        <pkg-ref id="com.wedo.cleansuite.app"/>
+    </choice>
+    <choice id="com.wedo.cleansuite.cli" visible="false">
+        <pkg-ref id="com.wedo.cleansuite.cli"/>
+    </choice>
+    <pkg-ref id="com.wedo.cleansuite.app" version="1.2" onConclusion="none">CleanSuiteApp.pkg</pkg-ref>
+    <pkg-ref id="com.wedo.cleansuite.cli" version="1.2" onConclusion="none">CleanSuiteCLI.pkg</pkg-ref>
+</installer-gui-script>
