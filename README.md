@@ -3,7 +3,7 @@
 A next-generation macOS Cleaning, Optimization & Auto-Maintenance Suite.
 
 <p align="center">
-  <img src="https://i.urusai.cc/zBAOG.jpg" width="480" alt="CleanSuite Hero">
+  <img src="assets/ui/hero.jpg" width="480" alt="CleanSuite Hero">
 </p>
 
 
