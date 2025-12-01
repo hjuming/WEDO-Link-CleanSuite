@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
+    <key>CFBundleExecutable</key>
+    <string>CleanSuite</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+	<key>CFBundleDisplayName</key>
+	<string>CleanSuite</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>zh-Hant</string>
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>zh-Hant</string>
+        <string>en</string>
+    </array>
+    <key>CFBundleIdentifier</key>
+    <string>com.wedo.CleanSuite</string>
+    <key>CFBundleName</key>
+    <string>CleanSuite</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.2.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>13.0</string>
+</dict>
+</plist>

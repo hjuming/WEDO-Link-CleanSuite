@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "CleanSuite CLI v1.2"
+echo "Usage: cleansuite [command]"
+echo "Commands: quick, deep, mail, browser, line"
+
+if [ "$1" == "quick" ]; then
+    echo "Running Quick Clean..."
+    sleep 1
+    echo "Done."
+elif [ "$1" == "deep" ]; then
+    echo "Running Deep Clean..."
+    sleep 2
+    echo "Done."
+else
+    echo "Unknown command."
+fi

@@ -1,0 +1,18 @@
+# Xcode
+.DS_Store
+*/build/
+*.derivedData
+*.xcodeproj/project.xcworkspace
+*.xcodeproj/xcuserdata
+
+# Swift Package Manager
+.build/
+
+# Build Artifacts
+*.app
+*.pkg
+*.dSYM
+
+# Local configuration
+*.plist
+!CleanSuite/CleanSuiteApp/Info.plist

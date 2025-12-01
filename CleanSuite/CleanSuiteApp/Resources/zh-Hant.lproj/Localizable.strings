@@ -1,9 +1,10 @@
-/* Localizable.strings */
-"Dashboard" = "儀表板";
-"Quick Clean" = "快速清理";
-"Deep Clean" = "深度清理";
-"Mail Clean" = "郵件清理";
-"Browser Clean" = "瀏覽器清理";
-"LINE Clean" = "LINE 清理";
-"Scheduler" = "排程";
-"Settings" = "設定";
+"DASHBOARD_TITLE" = "儀表板";
+"QUICK_CLEAN" = "快速清理";
+"DEEP_CLEAN" = "深度清理";
+"MAIL_CLEAN" = "郵件清理";
+"BROWSER_CLEAN" = "瀏覽器清理";
+"LINE_CLEAN" = "LINE 清理";
+"SCHEDULER" = "排程清理";
+"SETTINGS" = "設定";
+"AUTO_UPDATE" = "自動更新";
+"LANGUAGE" = "語言";

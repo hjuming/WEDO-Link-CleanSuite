@@ -1,0 +1,14 @@
+#!/bin/bash
+# Postinstall script for CleanSuite
+
+# Fix permissions
+chmod +x /usr/local/bin/cleansuite
+chmod +x /Applications/CleanSuite.app/Contents/MacOS/CleanSuiteApp
+
+# Load LaunchAgent (if user is logged in)
+if [ -f /Library/LaunchAgents/com.wedo.cleansuite.plist ]; then
+    # We can't easily load for the user from a root installer, but we can try or just leave it for next login
+    echo "LaunchAgent installed."
+fi
+
+exit 0
