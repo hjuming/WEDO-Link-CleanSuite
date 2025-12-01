@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f7;
+    color: #1d1d1f;
+    text-align: center;
+}
+
+.hero {
+    padding: 100px 20px 60px;
+}
+
+.hero-icon {
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15));
+}
+
+h1 {
+    margin-top: 25px;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #007aff;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.download-btn:hover {
+    background: #0062d6;
+}
+
+.version-note {
+    margin-top: 12px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.features {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    padding: 40px 5%;
+}
+
+.feature h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 40px;
+    opacity: 0.6;
+    font-size: 14px;
+}
