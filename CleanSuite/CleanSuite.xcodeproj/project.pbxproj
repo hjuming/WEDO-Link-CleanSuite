@@ -169,6 +169,7 @@
 			name = Debug;
 			buildSettings = {
 				PRODUCT_NAME = CleanSuite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wedo.cleansuite;
 				INFOPLIST_FILE = "CleanSuiteApp/Info.plist";
 				SDKROOT = macosx;
 				DEVELOPMENT_TEAM = "";
@@ -183,6 +184,7 @@
 			name = Release;
 			buildSettings = {
 				PRODUCT_NAME = CleanSuite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wedo.cleansuite;
 				INFOPLIST_FILE = "CleanSuiteApp/Info.plist";
 				SDKROOT = macosx;
 				DEVELOPMENT_TEAM = "";
