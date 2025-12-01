@@ -1,114 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CleanSuite - macOS System Optimizer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CleanSuite for macOS – 系統清理工具</title>
+    <meta name="description" content="CleanSuite 是一款 macOS 系統清理工具，提供快速清理、深度清理、瀏覽器快取清除、郵件快取清理、排程清理等功能。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css">
+
     <style>
-        :root {
-            --primary-color: #007AFF;
-            --bg-color: #F5F5F7;
-            --text-color: #1D1D1F;
-        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
         }
-        .container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0ea5e9, #6366f1);
         }
-        header {
-            padding: 60px 0;
-        }
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        p.subtitle {
-            font-size: 24px;
-            color: #86868B;
-            margin-bottom: 40px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 18px;
-            transition: background-color 0.2s;
-        }
-        .btn:hover {
-            background-color: #0062CC;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-            text-align: left;
-        }
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .feature-card h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        footer {
-            margin-top: 80px;
-            color: #86868B;
-            font-size: 14px;
-        }
-        a { color: var(--primary-color); text-decoration: none; }
     </style>
 </head>
-<body>
 
-<div class="container">
-    <header>
-        <h1>CleanSuite</h1>
-        <p class="subtitle">A modern, lightweight system maintenance utility for macOS.</p>
-        <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest" class="btn">Download for macOS</a>
-        <p style="margin-top: 15px; font-size: 14px; color: #86868B;">Requires macOS 13.0 or later</p>
-    </header>
+<body class="bg-gray-50 text-gray-800">
 
-    <div class="features">
-        <div class="feature-card">
-            <h3>Dashboard</h3>
-            <p>Get a quick overview of your system health and storage usage at a glance.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Quick Clean</h3>
-            <p>Fast scanning and removal of common temporary files and caches to free up space.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Deep Clean</h3>
-            <p>Thorough system scan for large files, old logs, and redundant data.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Privacy</h3>
-            <p>Clean browser history and cookies for Safari, Chrome, and Firefox.</p>
-        </div>
-    </div>
+    <!-- HERO -->
+    <section class="hero-bg text-white py-20">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h1 class="text-4xl font-extrabold mb-4">CleanSuite for macOS</h1>
+            <p class="text-xl opacity-90">
+                一款乾淨、輕量、實用的 macOS 系統清理工具。
+                <br>
+                A clean and lightweight macOS maintenance utility.
+            </p>
 
-    <footer>
-        <p>&copy; 2025 WEDO Link. Open Source on <a href="https://github.com/hjuming/WEDO-Link-CleanSuite">GitHub</a>.</p>
+            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                class="inline-block mt-8 bg-white text-indigo-600 font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-100 transition">
+                ⬇ 下載 Download (Latest Version)
+            </a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">主要功能 Features</h2>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="font-bold text-xl mb-2">⚡ 快速清理 Quick Clean</h3>
+                    <p class="text-gray-600">移除一般快取、暫存檔案，恢復磁碟空間。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-xl mb-2">🧹 深度清理 Deep Clean</h3>
+                    <p class="text-gray-600">針對系統層級與大型快取資料進行深度掃描。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-xl mb-2">🌐 瀏覽器清理 Browser Cache Clean</h3>
+                    <p class="text-gray-600">支援 Chrome、Safari、Edge 的快取清理。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-xl mb-2">📨 郵件快取清理 Mail Cache Clean</h3>
+                    <p class="text-gray-600">清除 macOS Mail.app 生成的大型快取。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-xl mb-2">🗓 排程清理 Scheduler</h3>
+                    <p class="text-gray-600">設定定期排程，自動進行清理作業。</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-xl mb-2">⚙ 設定 Settings</h3>
+                    <p class="text-gray-600">提供偏好設定、語系切換與行為控制。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREENSHOTS PLACEHOLDER -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">畫面預覽 Screenshots</h2>
+            <p class="text-gray-600">以下僅為佔位圖，可之後加入正式 App 截圖。</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-gray-200 h-64 rounded-lg"></div>
+                <div class="bg-gray-200 h-64 rounded-lg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 text-center text-gray-600 text-sm">
+        <p>© 2025 CleanSuite · WEDO International Marketing Group</p>
+        <p class="mt-2">
+            Source on GitHub ·
+            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite" class="underline hover:text-gray-800">
+                WEDO-Link-CleanSuite Repo
+            </a>
+        </p>
     </footer>
-</div>
 
 </body>
+
 </html>
