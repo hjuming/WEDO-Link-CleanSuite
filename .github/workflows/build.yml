@@ -1,31 +1,32 @@
-name: Build CleanSuite macOS App
+name: Build CleanSuite
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-15
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Xcode
-        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+      - name: Select Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app
 
-      - name: Make scripts executable
-        run: chmod +x scripts/*.sh
-
-      - name: Build + Sign + PKG
-        run: scripts/build.sh
-
-      - name: Upload Release Artifact
+      - name: Build CleanSuite App
+        run: |
+          xcodebuild -project CleanSuite/CleanSuite.xcodeproj \
+                     -scheme CleanSuite \
+                     -configuration Release \
+                     -derivedDataPath build \
+                     clean build
+      - name: Upload Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.2.0-auto-${{ github.run_number }}
-          files: build/CleanSuite.pkg
+          tag_name: nightly
+          name: Nightly Auto Build
+          files: build/Build/Products/Release/CleanSuite.app
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
