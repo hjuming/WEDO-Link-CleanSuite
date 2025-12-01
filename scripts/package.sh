@@ -13,7 +13,7 @@ mkdir -p "$PKG_DIR"
 
 # Create PKG
 # Build the component package
-pkgbuild --root build/root --identifier com.wedo.cleansuite --version 1.0.0 --install-location / build/WEDO-Link-CleanSuite-Component.pkg
+pkgbuild --root build/root --identifier com.wedo.cleansuite --version 1.1.0 --install-location / --scripts scripts build/WEDO-Link-CleanSuite-Component.pkg
 
 # Prepare resources
 mkdir -p build/resources

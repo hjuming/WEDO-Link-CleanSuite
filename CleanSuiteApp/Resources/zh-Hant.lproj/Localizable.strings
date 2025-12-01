@@ -1,0 +1,34 @@
+/* Traditional Chinese */
+"dashboard.title" = "CleanSuite Pro";
+"dashboard.subtitle" = "專業 macOS 清理工具組";
+"dashboard.storage.free" = "可用";
+"dashboard.storage.used" = "已用";
+"dashboard.ready" = "準備清理...";
+"dashboard.cleaning" = "清理中...";
+"dashboard.done" = "完成。";
+
+"sidebar.title" = "WEDO Link\nCleanSuite";
+"sidebar.section.cleaners" = "清理工具";
+"sidebar.section.settings" = "設定";
+"sidebar.section.update" = "更新";
+
+"cleaner.quick" = "快速清理";
+"cleaner.deep" = "深度清理";
+"cleaner.mail" = "郵件清理";
+"cleaner.browser" = "瀏覽器清理";
+"cleaner.line" = "LINE 清理";
+
+"settings.title" = "偏好設定";
+"settings.daily" = "每日快速清理";
+"settings.weekly" = "每週深度清理";
+"settings.lowdisk" = "磁碟不足自動清理 (<20GB)";
+"settings.mail" = "清理 Apple Mail 附件";
+"settings.browser" = "清理瀏覽器快取";
+"settings.line" = "清理 LINE 快取";
+"settings.autostart" = "登入時自動啟動";
+
+"update.check" = "檢查更新";
+"update.uptodate" = "目前已是最新版本。";
+"update.available" = "有新版本可用";
+"update.downloading" = "下載中...";
+"update.install" = "安裝更新";

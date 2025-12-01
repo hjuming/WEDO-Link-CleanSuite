@@ -3,19 +3,19 @@ import Foundation
 enum CleanSuiteItems: CaseIterable {
     case quick, deep, mail, browser, weekly, daily, lowstorage, boot, line, chrome, safari
 
-    var title: String {
+    var titleKey: String {
         switch self {
-        case .quick: return "Quick Clean"
-        case .deep: return "Deep Clean"
-        case .mail: return "Mail Cleanup"
-        case .browser: return "Browser Cleanup"
-        case .weekly: return "Weekly Deep Clean"
-        case .daily: return "Daily Quick Clean"
-        case .lowstorage: return "Low Storage Auto-Clean"
-        case .boot: return "Boot Auto-Clean"
-        case .line: return "LINE Cleanup"
-        case .chrome: return "Chrome Cleanup"
-        case .safari: return "Safari Cleanup"
+        case .quick: return "cleaner.quick"
+        case .deep: return "cleaner.deep"
+        case .mail: return "cleaner.mail"
+        case .browser: return "cleaner.browser"
+        case .weekly: return "settings.weekly"
+        case .daily: return "settings.daily"
+        case .lowstorage: return "settings.lowdisk"
+        case .boot: return "settings.autostart"
+        case .line: return "cleaner.line"
+        case .chrome: return "cleaner.browser"
+        case .safari: return "cleaner.browser"
         }
     }
 
