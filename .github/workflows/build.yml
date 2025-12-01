@@ -17,11 +17,7 @@ jobs:
 
       - name: Build CleanSuite App
         run: |
-          xcodebuild -project CleanSuite/CleanSuite.xcodeproj \
-                     -scheme CleanSuite \
-                     -configuration Release \
-                     -derivedDataPath build \
-                     clean build
+          swift build --configuration release
       - name: Upload Release
         uses: softprops/action-gh-release@v1
         with:
