@@ -1,2 +1,128 @@
-// This is a placeholder project file.
-// Please open the folder 'CleanSuite' in Xcode to use the Swift Package structure.
+//
+//  CleanSuite macOS App — Generated Automatically
+//
+
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 60;
+  objects = {
+
+/* ========= File References ========= */
+    APP_SWIFT = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CleanSuiteApp.swift"; sourceTree = "<group>"; };
+    CONTENT_SWIFT = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+    INFO_PLIST = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
+    ASSETS = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+
+/* ========= Groups ========= */
+    MAIN_GROUP = {
+      isa = PBXGroup;
+      children = (
+        APP_FOLDER,
+      );
+      sourceTree = "<group>";
+    };
+
+    APP_FOLDER = {
+      isa = PBXGroup;
+      path = "";
+      children = (
+        APP_SWIFT,
+        CONTENT_SWIFT,
+        INFO_PLIST,
+        ASSETS,
+      );
+      sourceTree = "<group>";
+    };
+
+/* ========= Build Phases ========= */
+    BUILD_PHASE_SOURCES = {
+      isa = PBXSourcesBuildPhase;
+      files = ( APP_SWIFT_BUILD, CONTENT_SWIFT_BUILD );
+    };
+
+    BUILD_PHASE_RESOURCES = {
+      isa = PBXResourcesBuildPhase;
+      files = ( ASSETS_BUILD );
+    };
+
+/* ========= Build Files ========= */
+    APP_SWIFT_BUILD = { isa = PBXBuildFile; fileRef = APP_SWIFT; };
+    CONTENT_SWIFT_BUILD = { isa = PBXBuildFile; fileRef = CONTENT_SWIFT; };
+    ASSETS_BUILD = { isa = PBXBuildFile; fileRef = ASSETS; };
+
+/* ========= Native Target ========= */
+    CLEAN_TARGET = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = TARGET_CONFIG_LIST;
+      buildPhases = (
+        BUILD_PHASE_SOURCES,
+        BUILD_PHASE_RESOURCES
+      );
+      buildRules = ();
+      dependencies = ();
+      name = "CleanSuite";
+      productName = "CleanSuite";
+      productType = "com.apple.product-type.application";
+      productReference = PRODUCT_REF;
+    };
+
+    PRODUCT_REF = {
+      isa = PBXFileReference;
+      explicitFileType = wrapper.application;
+      path = "CleanSuite.app";
+      sourceTree = BUILT_PRODUCTS_DIR;
+    };
+
+/* ========= Project Configurations ========= */
+    PROJECT_CONFIG_LIST = {
+      isa = XCConfigurationList;
+      buildConfigurations = ( DEBUG_CONFIG, RELEASE_CONFIG );
+      defaultConfigurationName = Release;
+    };
+
+    TARGET_CONFIG_LIST = {
+      isa = XCConfigurationList;
+      buildConfigurations = ( DEBUG_TARGET_CONFIG, RELEASE_TARGET_CONFIG );
+      defaultConfigurationName = Release;
+    };
+
+    DEBUG_CONFIG = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        PRODUCT_NAME = CleanSuite;
+        SDKROOT = macosx;
+      };
+      name = Debug;
+    };
+
+    RELEASE_CONFIG = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        PRODUCT_NAME = CleanSuite;
+        SDKROOT = macosx;
+      };
+      name = Release;
+    };
+
+    DEBUG_TARGET_CONFIG = { isa = XCBuildConfiguration; buildSettings = {}; name = Debug; };
+    RELEASE_TARGET_CONFIG = { isa = XCBuildConfiguration; buildSettings = {}; name = Release; };
+
+/* ========= PBXProject Root ========= */
+    PROJECT = {
+      isa = PBXProject;
+      attributes = { LastUpgradeCheck = 1600; ORGANIZATIONNAME = "WEDO"; };
+      buildConfigurationList = PROJECT_CONFIG_LIST;
+      compatibilityVersion = "Xcode 16.0";
+      developmentRegion = en;
+      hasScannedForEncodings = 0;
+      knownRegions = ( en, "zh-Hant" );
+      mainGroup = MAIN_GROUP;
+      productRefGroup = APP_FOLDER;
+      projectDirPath = "";
+      targets = ( CLEAN_TARGET );
+    };
+
+  };
+  rootObject = PROJECT;
+}

@@ -16,3 +16,4 @@
 # Local configuration
 *.plist
 !CleanSuite/CleanSuiteApp/Info.plist
+!CleanSuite/Info.plist
