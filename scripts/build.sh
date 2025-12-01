@@ -29,6 +29,12 @@ swiftc \
 # Copy Info.plist
 cp scripts/Info.plist "$APP_BUNDLE/Contents/Info.plist"
 
+# Compile Assets (AppIcon)
+if [ -d "AppIcon.xcassets" ]; then
+    echo "Compiling Assets..."
+    /usr/bin/xcrun actool "AppIcon.xcassets" --compile "$APP_BUNDLE/Contents/Resources" --platform macosx --minimum-deployment-target 13.0 --app-icon AppIcon --output-partial-info-plist /tmp/assetcatalog_generated_info.plist
+fi
+
 # Copy Resources (Icons)
 if [ -f "assets/icons/AppIcon.icns" ]; then
     cp "assets/icons/AppIcon.icns" "$APP_BUNDLE/Contents/Resources/AppIcon.icns"

@@ -12,10 +12,16 @@ mkdir -p "$PKG_DIR"
 ./scripts/build.sh
 
 # Create PKG
-pkgbuild --root "$APP_BUNDLE" \
-         --identifier "com.wedo.cleansuite" \
-         --version "1.0" \
-         --install-location "/Applications/$APP_NAME.app" \
-         "$PKG_NAME"
+# Build the component package
+pkgbuild --root build/root --identifier com.wedo.cleansuite --version 1.0.0 --install-location / build/WEDO-Link-CleanSuite-Component.pkg
 
-echo "Package Created: $PKG_NAME"
+# Prepare resources
+mkdir -p build/resources
+cp assets/icons/installer-icon.png build/resources/background.png
+cp scripts/welcome.html build/resources/welcome.html
+cp scripts/distribution.xml build/distribution.xml
+
+# Build the product archive
+productbuild --distribution build/distribution.xml --resources build/resources --package-path build build/WEDO-Link-CleanSuite.pkg
+
+echo "Package Created: build/WEDO-Link-CleanSuite.pkg"
