@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node
+node_modules/
+npm-debug.log
+
+# Logs
+*.log
+
+# Build
+pkg/
+dist/
+out/
+build/
+
+# Python Cache
+__pycache__/
+
+# Icon sets
+*.icns
+*.iconset
+
+# System cleanup outputs
+tmp/
