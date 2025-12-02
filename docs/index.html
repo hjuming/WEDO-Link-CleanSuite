@@ -20,7 +20,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -66,8 +66,13 @@
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">常見問題</a>
                     <a href="./changelog/"
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">更新日誌</a>
+                    <a href="./privacy/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">隱私權</a>
+                    <a href="./eula/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">使用者授權</a>
                     <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">下載</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        data-download>下載</a>
                     <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
                     <button onclick="switchLanguage()"
                         class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">EN</button>
@@ -96,8 +101,13 @@
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">常見問題</a>
             <a href="./changelog/"
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">更新日誌</a>
+            <a href="./privacy/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">隱私權</a>
+            <a href="./eula/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">使用者授權</a>
             <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">下載</a>
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+                data-download>下載</a>
             <button onclick="switchLanguage()"
                 class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Switch
                 to English</button>
@@ -116,8 +126,9 @@
 
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a id="download-btn" href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                    data-download
                     class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1">
-                    免費下載 <span class="latest-version text-blue-200 text-sm ml-1"></span>
+                    免費下載 <span class="latest-version text-blue-200 text-sm ml-1" data-latest-version></span>
                 </a>
                 <a href="./tutorial/"
                     class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition">
@@ -203,15 +214,15 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-gray-800 border-t dark:border-gray-700 mt-auto">
-        <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-500 dark:text-gray-400 text-sm">© 2025 CleanSuite · WEDO International Marketing Group
-            </p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="https://github.com/hjuming/WEDO-Link-CleanSuite"
-                    class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">GitHub</a>
-                <a href="./changelog/"
-                    class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">更新日誌</a>
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-500 dark:text-gray-400">&copy; 2023 CleanSuite. All rights reserved.</p>
+                <div class="mt-4 space-x-4">
+                    <a href="./privacy/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">隱私權政策</a>
+                    <span class="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="./eula/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">使用者授權</a>
+                </div>
             </div>
         </div>
     </footer>

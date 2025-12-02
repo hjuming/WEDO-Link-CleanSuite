@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     highlightNav();
-    fetchVersion();
+    fetchVersion(); // Keep for backward compatibility if needed, or remove if replaced
+    fetchLatestVersion();
     initDarkMode();
 
     // Only fetch changelog if we are on the changelog page
@@ -138,5 +139,34 @@ async function fetchChangelog() {
 
     } catch (e) {
         console.log("Using fallback changelog");
+    }
+}
+
+// --- Fetch Latest Version & Update Download Buttons ---
+async function fetchLatestVersion() {
+    try {
+        const res = await fetch("https://api.github.com/repos/hjuming/WEDO-Link-CleanSuite/releases/latest");
+        const data = await res.json();
+
+        if (data && data.tag_name) {
+            const version = data.tag_name;
+
+            // Update version text
+            document.querySelectorAll("[data-latest-version]").forEach(el => {
+                el.textContent = version;
+            });
+
+            // Find .pkg asset
+            const pkgAsset = data.assets.find(asset => asset.name.endsWith(".pkg"));
+            if (pkgAsset) {
+                // Update download links
+                document.querySelectorAll("[data-download]").forEach(el => {
+                    el.href = pkgAsset.browser_download_url;
+                });
+            }
+        }
+    } catch (e) {
+        console.error("Latest version fetch failed:", e);
+        // Fallback is handled by HTML default values
     }
 }

@@ -9,6 +9,7 @@
             <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <link>https://github.com/hjuming/WEDO-Link-CleanSuite/releases/tag/v1.2.1</link>
+            <enclosure url="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/download/v1.2.1/CleanSuite.pkg" sparklev:version="1.2.1" sparklev:shortVersionString="1.2.1" type="application/octet-stream" />
             <description>
                 <![CDATA[
                 <ul>
