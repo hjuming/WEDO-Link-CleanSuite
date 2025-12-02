@@ -30,7 +30,8 @@
 
     <!-- HEADER -->
     <header class="flex justify-end px-6 py-4">
-        <a href="en/index.html" class="lang-btn text-sm text-gray-700 bg-gray-200 px-3 py-1 rounded-md">
+        <a href="javascript:void(0)" onclick="switchLanguage('en')"
+            class="lang-btn text-sm text-gray-700 bg-gray-200 px-3 py-1 rounded-md">
             English
         </a>
     </header>
@@ -43,9 +44,9 @@
                 一款乾淨、輕量、實用的 macOS 系統清理工具。
             </p>
 
-            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+            <a id="download-btn" href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
                 class="inline-block mt-8 bg-white text-indigo-600 font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-100 transition">
-                ⬇ 下載最新版本
+                ⬇ 下載最新版本 <span class="latest-version"></span>
             </a>
         </div>
     </section>
@@ -107,6 +108,7 @@
         </p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
