@@ -5,10 +5,8 @@
     <meta charset="UTF-8" />
     <title>CleanSuite — macOS System Cleaner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="../script.js"></script>
-
+    <script defer src="/WEDO-Link-CleanSuite/script.js"></script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif;
@@ -16,54 +14,145 @@
     </style>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 flex flex-col min-h-screen">
 
     <!-- Nav -->
-    <nav class="w-full bg-white shadow-sm p-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold">CleanSuite</h1>
-        <button onclick="switchLanguage('zh')" class="text-blue-600 underline">
-            中文
-        </button>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="../" class="text-xl font-bold text-gray-800 hover:text-blue-600 transition">CleanSuite</a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="./" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                    <a href="../tutorial/en/" class="text-gray-600 hover:text-blue-600 transition">Tutorial</a>
+                    <a href="../changelog/en/" class="text-gray-600 hover:text-blue-600 transition">Changelog</a>
+                    <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                        class="text-gray-600 hover:text-blue-600 transition">Download</a>
+                    <button onclick="switchLanguage()"
+                        class="text-sm border border-gray-300 rounded px-3 py-1 hover:bg-gray-100 transition">中文</button>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMenu()" class="text-gray-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="./" class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Home</a>
+            <a href="../tutorial/en/" class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Tutorial</a>
+            <a href="../changelog/en/" class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Changelog</a>
+            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Download</a>
+            <button onclick="switchLanguage()"
+                class="block w-full text-left py-2 px-4 text-gray-700 hover:bg-gray-50">切換至中文</button>
+        </div>
     </nav>
 
     <!-- Hero -->
-    <section class="text-center py-20">
-        <h2 class="text-4xl font-bold mb-4">CleanSuite</h2>
-        <p class="text-gray-700 text-lg">
-            Your macOS deserves a cleaner, smoother experience.
-        </p>
+    <header class="bg-white">
+        <div class="max-w-4xl mx-auto text-center py-20 px-6">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">CleanSuite for macOS</h1>
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+                A lightweight system cleaning utility designed for macOS.<br>
+                Free up space, protect privacy, and keep your Mac running smoothly.
+            </p>
 
-        <a id="download-btn" href="#"
-            class="inline-block mt-8 bg-blue-600 text-white px-8 py-3 rounded-lg shadow hover:bg-blue-700 transition">
-            Download CleanSuite <span class="latest-version text-yellow-300"></span>
-        </a>
-
-        <p class="mt-3 text-gray-500">
-            Latest version: <span class="latest-version font-semibold"></span>
-        </p>
-    </section>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a id="download-btn" href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                    class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1">
+                    Download Free <span class="latest-version text-blue-200 text-sm ml-1"></span>
+                </a>
+                <a href="../tutorial/en/"
+                    class="bg-gray-100 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 transition">
+                    View Tutorial
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-gray-500">Supports macOS 13.0 (Ventura) and later</p>
+        </div>
+    </header>
 
     <!-- Features -->
-    <section class="max-w-4xl mx-auto p-6 grid md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white shadow rounded-lg">
-            <h3 class="font-bold text-lg mb-2">Quick Clean</h3>
-            <p class="text-gray-600">Remove caches, logs, and temporary files instantly.</p>
-        </div>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Powerful Features, Simple to Use</h2>
 
-        <div class="p-6 bg-white shadow rounded-lg">
-            <h3 class="font-bold text-lg mb-2">Deep Clean</h3>
-            <p class="text-gray-600">Perform deeper system cleanup and free more space.</p>
-        </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-2xl">⚡️
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Quick Clean</h3>
+                    <p class="text-gray-600 leading-relaxed">Instantly remove system temp files, caches, and logs to
+                        free up disk space.</p>
+                </div>
 
-        <div class="p-6 bg-white shadow rounded-lg">
-            <h3 class="font-bold text-lg mb-2">App & Browser Cleanup</h3>
-            <p class="text-gray-600">Clear LINE, Mail, and browser caches & histories.</p>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6 text-2xl">🧹
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Deep Clean</h3>
+                    <p class="text-gray-600 leading-relaxed">Scan deep into the system to find forgotten large files and
+                        old data.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-2xl">🛡
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Privacy Protection</h3>
+                    <p class="text-gray-600 leading-relaxed">Clear caches and history from browsers (Safari, Chrome) and
+                        messengers (LINE).</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 text-2xl">🗓
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Auto Scheduler</h3>
+                    <p class="text-gray-600 leading-relaxed">Set up daily, weekly, or monthly automatic cleaning for
+                        hands-free maintenance.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6 text-2xl">📨</div>
+                    <h3 class="text-xl font-bold mb-3">Mail Cleanup</h3>
+                    <p class="text-gray-600 leading-relaxed">Specifically target attachments and caches from the macOS
+                        Mail app.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 text-2xl">⚙️
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Personalization</h3>
+                    <p class="text-gray-600 leading-relaxed">Customize cleaning rules and notification preferences to
+                        suit your needs.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-500 py-6 mt-20">
-        © 2025 CleanSuite — WEDO International Marketing Group
+    <footer class="bg-white border-t mt-auto">
+        <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm">© 2025 CleanSuite · WEDO International Marketing Group</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="https://github.com/hjuming/WEDO-Link-CleanSuite"
+                    class="text-gray-400 hover:text-gray-600 transition">GitHub</a>
+                <a href="../changelog/en/" class="text-gray-400 hover:text-gray-600 transition">Changelog</a>
+            </div>
+        </div>
     </footer>
 
 </body>

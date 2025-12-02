@@ -1,29 +1,62 @@
-// --- Automatic Language Redirect on First Visit ---
-(function () {
-    const saved = localStorage.getItem("cleansuite_lang");
-    const isEnglish = navigator.language.startsWith("en");
+document.addEventListener("DOMContentLoaded", () => {
+    highlightNav();
+    fetchVersion();
+});
 
-    // If first time visit (no saved preference)
-    if (!saved) {
-        if (isEnglish && !location.pathname.includes("/en/")) {
-            localStorage.setItem("cleansuite_lang", "en");
-            location.href = "./en/";
-        } else if (!isEnglish && location.pathname.includes("/en/")) {
-            localStorage.setItem("cleansuite_lang", "zh");
-            location.href = "../";
+// --- Navigation Highlighter ---
+function highlightNav() {
+    const path = window.location.pathname;
+    const links = document.querySelectorAll("nav a");
+
+    links.forEach(link => {
+        const href = link.getAttribute("href");
+        // Simple check: if path contains the href (ignoring relative parts like ../)
+        // Adjust logic based on your specific URL structure
+        if (href === "/" || href === "../" || href === "../../") return; // Skip home link for now, handle separately if needed
+
+        const cleanHref = href.replace(/\.\.\//g, "").replace(/\/$/, "");
+        if (path.includes(cleanHref) && cleanHref !== "") {
+            link.classList.add("text-blue-600", "font-bold");
         }
-    }
-})();
+    });
+}
 
 // --- Language Switcher ---
-function switchLanguage(lang) {
-    localStorage.setItem("cleansuite_lang", lang);
-    if (lang === "en") {
-        // Assuming called from root
-        window.location.href = "en/";
+function switchLanguage() {
+    const path = window.location.pathname;
+    let newPath;
+
+    // Check if currently in an 'en' directory
+    if (path.includes("/en/")) {
+        // Switch to Chinese (Parent directory)
+        // Example: /WEDO-Link-CleanSuite/en/ -> /WEDO-Link-CleanSuite/
+        // Example: /WEDO-Link-CleanSuite/tutorial/en/ -> /WEDO-Link-CleanSuite/tutorial/
+        newPath = path.replace("/en/", "/");
     } else {
-        // Assuming called from en/
-        window.location.href = "../";
+        // Switch to English (Sub directory)
+        // Example: /WEDO-Link-CleanSuite/ -> /WEDO-Link-CleanSuite/en/
+        // Example: /WEDO-Link-CleanSuite/tutorial/ -> /WEDO-Link-CleanSuite/tutorial/en/
+
+        // Need to handle trailing slash
+        if (path.endsWith("/")) {
+            newPath = path + "en/";
+        } else if (path.endsWith("index.html")) {
+            newPath = path.replace("index.html", "en/index.html");
+        } else {
+            newPath = path + "/en/";
+        }
+    }
+
+    window.location.href = newPath;
+}
+
+// --- Mobile Menu Toggle ---
+function toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+    } else {
+        menu.classList.add("hidden");
     }
 }
 
@@ -48,5 +81,3 @@ async function fetchVersion() {
         console.error("Version fetch failed:", e);
     }
 }
-
-fetchVersion();
