@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
-    <title>CleanSuite — macOS 系統清理工具</title>
+    <title>CleanSuite — macOS System Cleaner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Google Analytics -->
@@ -41,7 +41,7 @@
     <script defer src="/WEDO-Link-CleanSuite/script.js"></script>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif;
         }
     </style>
 </head>
@@ -53,29 +53,28 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
-                <a href="./"
+                <a href="../"
                     class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 transition">CleanSuite</a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="./"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">首頁</a>
-                    <a href="./tutorial/"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">使用教學</a>
-                    <a href="./faq/"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">常見問題</a>
-                    <a href="./changelog/"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">更新日誌</a>
-                    <a href="./privacy/"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">隱私權</a>
-                    <a href="./eula/"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">使用者授權</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+                    <a href="../tutorial/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Tutorial</a>
+                    <a href="../faq/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
+                    <a href="../changelog/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Changelog</a>
+                    <a href="./privacy/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Privacy</a>
+                    <a href="./eula/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">EULA</a>
                     <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
-                        data-download>下載</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Download</a>
                     <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
                     <button onclick="switchLanguage()"
-                        class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">EN</button>
+                        class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">中文</button>
                 </div>
 
                 <!-- Mobile Button -->
@@ -94,23 +93,21 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
             <a href="./"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">首頁</a>
-            <a href="./tutorial/"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">使用教學</a>
-            <a href="./faq/"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">常見問題</a>
-            <a href="./changelog/"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">更新日誌</a>
-            <a href="./privacy/"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">隱私權</a>
-            <a href="./eula/"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">使用者授權</a>
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Home</a>
+            <a href="../tutorial/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Tutorial</a>
+            <a href="../faq/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">FAQ</a>
+            <a href="../changelog/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Changelog</a>
+            <a href="./privacy/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Privacy</a>
+            <a href="./eula/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">EULA</a>
             <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
-                data-download>下載</a>
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Download</a>
             <button onclick="switchLanguage()"
-                class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Switch
-                to English</button>
+                class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">切換至中文</button>
         </div>
     </nav>
 
@@ -120,93 +117,102 @@
             <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">CleanSuite for macOS
             </h1>
             <p class="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-                專為 macOS 設計的輕量級系統清理工具。<br>
-                快速釋放空間，保護隱私，讓你的 Mac 保持最佳狀態。
+                A lightweight system cleaning utility designed for macOS.<br>
+                Free up space, protect privacy, and keep your Mac running smoothly.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a id="download-btn" href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
                     data-download
                     class="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1">
-                    免費下載 <span class="latest-version text-blue-200 text-sm ml-1" data-latest-version></span>
+                    Download Free <span class="latest-version text-blue-200 text-sm ml-1" data-latest-version></span>
                 </a>
-                <a href="./tutorial/"
+                <a href="../tutorial/en/"
                     class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition">
-                    查看教學
+                    View Tutorial
                 </a>
             </div>
-            <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">支援 macOS 13.0 (Ventura) 及以上版本</p>
+            <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">Supports macOS 13.0 (Ventura) and later</p>
         </div>
     </header>
 
     <!-- Features Demo -->
     <section class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800 dark:text-white">強大功能，簡單易用</h2>
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800 dark:text-white">Powerful Features, Simple to
+                Use</h2>
 
             <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
                 <!-- Dashboard -->
                 <div
                     class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
                     <div class="text-4xl mb-4">📊</div>
-                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">儀表板</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">系統健康狀況、儲存空間使用量和快速操作的總覽。</p>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Dashboard</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Overview of system health, storage usage, and
+                        quick actions.</p>
                 </div>
 
                 <!-- Quick Clean -->
                 <div
                     class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
                     <div class="text-4xl mb-4">⚡️</div>
-                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">快速清理</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">快速掃描並移除常見的暫存檔案和快取。</p>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Quick Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Fast scanning and removal of common temporary
+                        files and caches.</p>
                 </div>
 
                 <!-- Deep Clean -->
                 <div
                     class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
                     <div class="text-4xl mb-4">🧹</div>
-                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">深度清理</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">徹底掃描系統中的大型檔案、舊日誌和冗餘資料。</p>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Deep Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Thorough system scan for large files, old logs,
+                        and redundant data.</p>
                 </div>
 
                 <!-- Browser Clean -->
                 <div
                     class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
                     <div class="text-4xl mb-4">🌐</div>
-                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">瀏覽器清理</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">專門針對 Safari、Chrome 和 Firefox 的快取/歷史記錄進行清理。</p>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Browser Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Specialized cleaning for Safari, Chrome, and
+                        Firefox caches/history.</p>
                 </div>
 
                 <!-- Mail Clean -->
                 <div
                     class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
                     <div class="text-4xl mb-4">📬</div>
-                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">郵件清理</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">移除本機郵件附件和不必要的下載項目。</p>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Mail Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Removal of local mail attachments and
+                        unnecessary downloads.</p>
                 </div>
 
                 <!-- LINE Clean -->
                 <div
                     class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
                     <div class="text-4xl mb-4">💬</div>
-                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">LINE 清理</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">針對 LINE 應用程式快取和暫存檔案的定向清理。</p>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">LINE Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Targeted cleaning for LINE application caches
+                        and temporary files.</p>
                 </div>
 
                 <!-- Scheduler -->
                 <div
                     class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
                     <div class="text-4xl mb-4">🗓</div>
-                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">排程器</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">設定定期背景清理任務的自動化選項。</p>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Scheduler</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Automation settings for periodic background
+                        cleaning tasks.</p>
                 </div>
 
                 <!-- Settings -->
                 <div
                     class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
                     <div class="text-4xl mb-4">⚙️</div>
-                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">設定</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">應用程式行為、通知和更新的使用者偏好設定。</p>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Settings</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">User preferences for app behavior,
+                        notifications, and updates.</p>
                 </div>
 
             </div>
@@ -214,37 +220,45 @@
     </section>
 
     <!-- Roadmap -->
-    <section class="py-12 bg-gray-50 dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700 transition-colors duration-200">
+    <section
+        class="py-12 bg-gray-50 dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700 transition-colors duration-200">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">🗺 路線圖 (Roadmap)</h2>
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">🗺 Roadmap</h2>
             <div class="space-y-4">
                 <div class="flex items-center space-x-3">
                     <span class="text-green-500 text-xl">✅</span>
-                    <span class="text-gray-700 dark:text-gray-300 font-medium"><strong>v1.0</strong>: 初始專案結構與 UI 框架</span>
+                    <span class="text-gray-700 dark:text-gray-300 font-medium"><strong>v1.0</strong>: Initial Project
+                        Structure & UI Framework</span>
                 </div>
                 <div class="flex items-center space-x-3">
                     <span class="text-green-500 text-xl">✅</span>
-                    <span class="text-gray-700 dark:text-gray-300 font-medium"><strong>v1.2</strong>: 完成 SwiftUI 介面實作</span>
+                    <span class="text-gray-700 dark:text-gray-300 font-medium"><strong>v1.2</strong>: Complete SwiftUI
+                        Interface Implementation</span>
                 </div>
                 <div class="flex items-center space-x-3">
                     <span class="text-gray-400 text-xl">⬜️</span>
-                    <span class="text-gray-600 dark:text-gray-400"><strong>v1.3</strong>: 核心清理引擎實作</span>
+                    <span class="text-gray-600 dark:text-gray-400"><strong>v1.3</strong>: Core Cleaning Engine
+                        Implementation</span>
                 </div>
                 <div class="flex items-center space-x-3">
                     <span class="text-gray-400 text-xl">⬜️</span>
-                    <span class="text-gray-600 dark:text-gray-400"><strong>v1.4</strong>: 系統掃描邏輯與深度清理</span>
+                    <span class="text-gray-600 dark:text-gray-400"><strong>v1.4</strong>: System Scanning Logic & Deep
+                        Clean</span>
                 </div>
                 <div class="flex items-center space-x-3">
                     <span class="text-gray-400 text-xl">⬜️</span>
-                    <span class="text-gray-600 dark:text-gray-400"><strong>v1.5</strong>: 排程器與自動化功能</span>
+                    <span class="text-gray-600 dark:text-gray-400"><strong>v1.5</strong>: Scheduler & Automation
+                        Features</span>
                 </div>
                 <div class="flex items-center space-x-3">
                     <span class="text-gray-400 text-xl">⬜️</span>
-                    <span class="text-gray-600 dark:text-gray-400"><strong>v2.0</strong>: 雲端同步與偏好設定</span>
+                    <span class="text-gray-600 dark:text-gray-400"><strong>v2.0</strong>: Cloud Sync &
+                        Preferences</span>
                 </div>
                 <div class="flex items-center space-x-3">
                     <span class="text-gray-400 text-xl">⬜️</span>
-                    <span class="text-gray-600 dark:text-gray-400"><strong>未來</strong>: 公證與簽署發布</span>
+                    <span class="text-gray-600 dark:text-gray-400"><strong>Future</strong>: Notarization & Signed
+                        Distribution</span>
                 </div>
             </div>
         </div>
@@ -256,17 +270,20 @@
         <div class="max-w-4xl mx-auto px-6 text-center">
             <div
                 class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl p-6">
-                <h3 class="text-lg font-bold text-yellow-800 dark:text-yellow-200 mb-2">🔐 安全性注意事項 (未簽署版本)</h3>
+                <h3 class="text-lg font-bold text-yellow-800 dark:text-yellow-200 mb-2">🔐 Security Notes (Unsigned
+                    Build)</h3>
                 <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
-                    由於此應用程式目前未經 Apple 公證，首次開啟時可能會看到安全性警告。
+                    Since this app is currently unsigned (not notarized by Apple), you may see a security warning when
+                    opening it for the first time.
                 </p>
                 <div
                     class="text-left text-sm text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 inline-block">
-                    <p class="font-semibold mb-1">繞過方法：</p>
+                    <p class="font-semibold mb-1">To bypass this:</p>
                     <ol class="list-decimal list-inside space-y-1">
-                        <li>在應用程式資料夾中的 <code>CleanSuite.app</code> 上按右鍵。</li>
-                        <li>從選單中選擇 <strong>打開 (Open)</strong>。</li>
-                        <li>在對話框中點擊 <strong>打開 (Open)</strong>。</li>
+                        <li>Right-click (or Control-click) on <code>CleanSuite.app</code> in your Applications folder.
+                        </li>
+                        <li>Select <strong>Open</strong> from the context menu.</li>
+                        <li>Click <strong>Open</strong> in the dialog box that appears.</li>
                     </ol>
                 </div>
             </div>
@@ -279,9 +296,10 @@
             <div class="text-center">
                 <p class="text-gray-500 dark:text-gray-400">&copy; 2025 CleanSuite. All rights reserved.</p>
                 <div class="mt-4 space-x-4">
-                    <a href="./privacy/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">隱私權政策</a>
+                    <a href="./privacy/en/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">Privacy
+                        Policy</a>
                     <span class="text-gray-300 dark:text-gray-600">|</span>
-                    <a href="./eula/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">使用者授權</a>
+                    <a href="./eula/en/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">EULA</a>
                 </div>
             </div>
         </div>

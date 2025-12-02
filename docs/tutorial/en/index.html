@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CleanSuite Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXXX');
+        fbq('track', 'PageView');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script defer src="/WEDO-Link-CleanSuite/script.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 flex flex-col min-h-screen transition-colors duration-200">
+
+    <!-- Nav -->
+    <nav class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50 transition-colors duration-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="../../en/"
+                    class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 transition">CleanSuite</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="../../en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+                    <a href="./"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Tutorial</a>
+                    <a href="../../faq/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
+                    <a href="../../changelog/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Changelog</a>
+                    <a href="../../privacy/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Privacy</a>
+                    <a href="../../eula/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">EULA</a>
+                    <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        data-download>Download</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="switchLanguage()"
+                        class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">中文</button>
+                </div>
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="toggleMenu()" class="text-gray-600 dark:text-gray-300 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+            <a href="../../en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Home</a>
+            <a href="./"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Tutorial</a>
+            <a href="../../faq/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">FAQ</a>
+            <a href="../../changelog/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Changelog</a>
+            <a href="../../privacy/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Privacy</a>
+            <a href="../../eula/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">EULA</a>
+            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+                data-download>Download</a>
+            <button onclick="switchLanguage()"
+                class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">切換至中文</button>
+        </div>
+    </nav>
+
+    <header class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
+        <div class="max-w-4xl mx-auto text-center py-16 px-6">
+            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">CleanSuite Tutorial</h1>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">Quick Start Guide: From Installation to Advanced
+                Settings</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+
+        <!-- Section 1 -->
+        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">1.
+                Download & Install</h2>
+            <div class="text-gray-700 dark:text-gray-300 space-y-4">
+                <p>
+                    Download the latest <strong>CleanSuite-Installer.pkg</strong> from the Home page or GitHub Releases.
+                </p>
+                <div class="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg border-l-4 border-blue-500">
+                    <h4 class="font-bold text-blue-700 dark:text-blue-300 mb-1">💡 Tip: Cannot Open App?</h4>
+                    <p class="text-sm text-blue-800 dark:text-blue-200">
+                        If macOS says "Cannot be opened because it is from an unidentified developer", simply
+                        <strong>Right-click (or Control-click)</strong> the app, select <strong>"Open"</strong>, and
+                        click <strong>"Open"</strong> in the dialog box.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">2.
+                Features Overview</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">⚡️ Quick Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                        Best for daily use. Scans and removes system caches, temp files, and logs. Recommended weekly.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">🧹 Deep Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                        Performs a comprehensive scan, including Xcode junk, old iOS updates, and large files.
+                        Recommended monthly.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">🌐 Browser Cleanup</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                        Supports Safari, Chrome, Edge. Clears history, cookies, and cached images to protect privacy.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">📨 Mail & Messengers</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                        Clears attachments downloaded by Mail App and caches from LINE (does not delete chat history).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">3.
+                Setting up Auto Scheduler</h2>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Don't want to clean manually? Set up an automatic schedule to let CleanSuite work in the background.
+            </p>
+            <ol class="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-2">
+                <li>Open CleanSuite and click <strong>Scheduler</strong> in the sidebar.</li>
+                <li>Choose frequency: <strong>Daily</strong>, <strong>Weekly</strong>, or <strong>Monthly</strong>.</li>
+                <li>Toggle the switch on. The system will automatically run Quick Clean tasks.</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-500 dark:text-gray-400">&copy; 2023 CleanSuite. All rights reserved.</p>
+                <div class="mt-4 space-x-4">
+                    <a href="../../privacy/en/"
+                        class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">Privacy Policy</a>
+                    <span class="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="../../eula/en/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">EULA</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

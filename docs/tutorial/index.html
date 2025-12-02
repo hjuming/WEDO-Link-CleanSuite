@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CleanSuite 使用教學</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXXX');
+        fbq('track', 'PageView');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script defer src="/WEDO-Link-CleanSuite/script.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 flex flex-col min-h-screen transition-colors duration-200">
+
+    <!-- Nav -->
+    <nav class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50 transition-colors duration-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="../"
+                    class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 transition">CleanSuite</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="../"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">首頁</a>
+                    <a href="./"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">使用教學</a>
+                    <a href="../faq/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">常見問題</a>
+                    <a href="../changelog/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">更新日誌</a>
+                    <a href="../privacy/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">隱私權</a>
+                    <a href="../eula/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">使用者授權</a>
+                    <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        data-download>下載</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="switchLanguage()"
+                        class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">EN</button>
+                </div>
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="toggleMenu()" class="text-gray-600 dark:text-gray-300 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+            <a href="../"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">首頁</a>
+            <a href="./"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">使用教學</a>
+            <a href="../faq/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">常見問題</a>
+            <a href="../changelog/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">更新日誌</a>
+            <a href="../privacy/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">隱私權</a>
+            <a href="../eula/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">使用者授權</a>
+            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+                data-download>下載</a>
+            <button onclick="switchLanguage()"
+                class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Switch
+                to English</button>
+        </div>
+    </nav>
+
+    <header class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
+        <div class="max-w-4xl mx-auto text-center py-16 px-6">
+            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">CleanSuite 使用教學</h1>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">快速上手指南：從安裝到進階設定</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+
+        <!-- Section 1 -->
+        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">1.
+                下載與安裝</h2>
+            <div class="text-gray-700 dark:text-gray-300 space-y-4">
+                <p>
+                    從首頁或 GitHub Releases 下載最新的 <strong>CleanSuite-Installer.pkg</strong> 檔案。
+                </p>
+                <div class="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg border-l-4 border-blue-500">
+                    <h4 class="font-bold text-blue-700 dark:text-blue-300 mb-1">💡 提示：無法開啟應用程式？</h4>
+                    <p class="text-sm text-blue-800 dark:text-blue-200">
+                        如果 macOS 顯示「無法打開，因為它來自未識別的開發者」，請在應用程式上按 <strong>右鍵 (或 Control-點擊)</strong>，選擇
+                        <strong>「打開」</strong>，然後在對話框中再次點擊 <strong>「打開」</strong> 即可。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">2.
+                功能模組介紹</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">⚡️ 快速清理 (Quick Clean)</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                        適合日常使用。快速掃描並刪除系統快取、暫存檔與日誌檔。建議每週執行一次。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">🧹 深度清潔 (Deep Clean)</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                        進行更全面的掃描，包含 Xcode 垃圾、舊的 iOS 更新檔等大型垃圾。建議每月執行一次。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">🌐 瀏覽器清理</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                        支援 Safari, Chrome, Edge。清除瀏覽紀錄、Cookies 與快取圖片，保護隱私並釋放空間。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">📨 郵件與通訊軟體</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                        清除 Mail App 下載的附件檔，以及 LINE 的快取資料（不會刪除聊天記錄）。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">3.
+                設定自動排程</h2>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+                不想手動清理？你可以設定自動排程，讓 CleanSuite 在背景默默為你工作。
+            </p>
+            <ol class="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-2">
+                <li>開啟 CleanSuite，點選側邊欄的 <strong>排程清理</strong>。</li>
+                <li>選擇頻率：<strong>每日</strong>、<strong>每週</strong> 或 <strong>每月</strong>。</li>
+                <li>開啟開關，系統將會自動在背景執行快速清理任務。</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-500 dark:text-gray-400">&copy; 2023 CleanSuite. All rights reserved.</p>
+                <div class="mt-4 space-x-4">
+                    <a href="../privacy/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">隱私權政策</a>
+                    <span class="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="../eula/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">使用者授權</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

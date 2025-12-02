@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用者授權合約 (EULA) - CleanSuite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#1a1a1a',
+                            card: '#2d2d2d',
+                            text: '#e5e5e5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dark-mode-bg {
+            background-color: #1a1a1a;
+        }
+
+        .dark-mode-text {
+            color: #e5e5e5;
+        }
+
+        .dark-mode-card {
+            background-color: #2d2d2d;
+        }
+    </style>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXXX');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXX&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body class="bg-gray-50 text-gray-900 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 font-sans">
+
+    <!-- Navigation -->
+    <nav
+        class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md fixed w-full z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span
+                        class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">CleanSuite</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="../"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">首頁</a>
+                    <a href="../tutorial/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">使用教學</a>
+                    <a href="../faq/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">常見問題</a>
+                    <a href="../changelog/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">更新日誌</a>
+                    <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        data-download>下載</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="switchLanguage()"
+                        class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">EN</button>
+                </div>
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="toggleMenu()" class="text-gray-600 dark:text-gray-300 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+            <a href="../"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">首頁</a>
+            <a href="../tutorial/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">使用教學</a>
+            <a href="../faq/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">常見問題</a>
+            <a href="../changelog/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">更新日誌</a>
+            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+                data-download>下載</a>
+            <button onclick="switchLanguage()"
+                class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Switch
+                to English</button>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <main class="pt-24 pb-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold mb-8 text-center">使用者授權合約 (EULA)</h1>
+        <div class="prose dark:prose-invert max-w-none">
+            <p>請在使用 CleanSuite（以下簡稱「本軟體」）之前仔細閱讀本使用者授權合約（EULA）。</p>
+
+            <h3>1. 授權授予</h3>
+            <p>本軟體授予您個人的、非獨家的、不可轉讓的授權，以在您的 macOS 裝置上下載、安裝及使用本軟體。</p>
+
+            <h3>2. 限制</h3>
+            <p>您不得：</p>
+            <ul>
+                <li>對本軟體進行反向工程、反編譯或反組譯。</li>
+                <li>修改、改編或翻譯本軟體。</li>
+                <li>出租、租賃或出借本軟體。</li>
+            </ul>
+
+            <h3>3. 免責聲明</h3>
+            <p>本軟體按「現狀」提供，不附帶任何明示或暗示的保證。作者不保證本軟體無錯誤或能滿足您的特定需求。在任何情況下，作者均不對因使用本軟體而造成的任何損害負責。</p>
+
+            <h3>4. 終止</h3>
+            <p>如果您違反本合約的任何條款，本授權將自動終止。終止後，您必須停止使用本軟體並銷毀所有副本。</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-500 dark:text-gray-400">&copy; 2023 CleanSuite. All rights reserved.</p>
+                <div class="mt-4 space-x-4">
+                    <a href="../privacy/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">隱私權政策</a>
+                    <span class="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="./" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">使用者授權</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

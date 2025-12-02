@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>CleanSuite Changelog</title>
+        <item>
+            <title>v1.2.1</title>
+            <pubDate>Mon, 02 Dec 2025 12:00:00 +0800</pubDate>
+            <sparkle:version>1.2.1</sparkle:version>
+            <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <link>https://github.com/hjuming/WEDO-Link-CleanSuite/releases/tag/v1.2.1</link>
+            <enclosure url="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/download/v1.2.1/CleanSuite.pkg" sparklev:version="1.2.1" sparklev:shortVersionString="1.2.1" type="application/octet-stream" />
+            <description>
+                <![CDATA[
+                <ul>
+                    <li>Complete SwiftUI Interface Implementation</li>
+                    <li>Fixed build errors and improved stability</li>
+                </ul>
+                ]]>
+            </description>
+        </item>
+    </channel>
+</rss>

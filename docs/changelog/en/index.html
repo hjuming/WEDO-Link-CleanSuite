@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CleanSuite Changelog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXXX');
+        fbq('track', 'PageView');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script defer src="/WEDO-Link-CleanSuite/script.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 flex flex-col min-h-screen transition-colors duration-200">
+
+    <!-- Nav -->
+    <nav class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50 transition-colors duration-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="../../en/"
+                    class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 transition">CleanSuite</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="../../en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+                    <a href="../../tutorial/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Tutorial</a>
+                    <a href="../../faq/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
+                    <a href="./"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Changelog</a>
+                    <a href="../../privacy/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Privacy</a>
+                    <a href="../../eula/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">EULA</a>
+                    <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                        data-download>Download</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="switchLanguage()"
+                        class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">中文</button>
+                </div>
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="toggleMenu()" class="text-gray-600 dark:text-gray-300 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+            <a href="../../en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Home</a>
+            <a href="../../tutorial/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Tutorial</a>
+            <a href="../../faq/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">FAQ</a>
+            <a href="./"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Changelog</a>
+            <a href="../../privacy/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Privacy</a>
+            <a href="../../eula/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">EULA</a>
+            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+                data-download>Download</a>
+            <button onclick="switchLanguage()"
+                class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">切換至中文</button>
+        </div>
+    </nav>
+
+    <header class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
+        <div class="max-w-4xl mx-auto text-center py-16 px-6">
+            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Changelog</h1>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">Track the latest updates and improvements of CleanSuite
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-8">
+
+        <!-- Dynamic Changelog Container -->
+        <div id="changelog-container"></div>
+
+        <!-- v1.2.1 -->
+        <div
+            class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl border-l-4 border-gray-300 dark:border-gray-600">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">v1.2.1</h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">2025-12-02</p>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-bold text-gray-700 dark:text-gray-300 mb-2">✨ New Features</h3>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
+                        <li>Added official GitHub Pages website and documentation.</li>
+                        <li>Added automatic update check (Sparkle Appcast).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-700 dark:text-gray-300 mb-2">🛠 Fixes & Improvements</h3>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
+                        <li>Fixed GitHub Actions build process and Swift version compatibility.</li>
+                        <li>Optimized project structure and removed redundant files.</li>
+                        <li>Updated README.md with comprehensive development and installation guide.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- v1.1.0 -->
+        <div
+            class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl border-l-4 border-gray-300 dark:border-gray-600">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">v1.1.0</h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">2025-12-01</p>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-bold text-gray-700 dark:text-gray-300 mb-2">✨ New Features</h3>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
+                        <li>Brand new SwiftUI interface integrating all cleaning modules.</li>
+                        <li>Added "Dashboard" to display disk usage.</li>
+                        <li>Added "Settings" panel for custom cleaning preferences.</li>
+                        <li>Added macOS Notification Center integration.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-500 dark:text-gray-400">&copy; 2023 CleanSuite. All rights reserved.</p>
+                <div class="mt-4 space-x-4">
+                    <a href="../../privacy/en/"
+                        class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">Privacy Policy</a>
+                    <span class="text-gray-300 dark:text-gray-600">|</span>
+                    <a href="../../eula/en/" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">EULA</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
