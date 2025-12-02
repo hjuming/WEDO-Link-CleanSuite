@@ -3,112 +3,69 @@
 
 <head>
     <meta charset="UTF-8" />
+    <title>CleanSuite — macOS 系統清理工具</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CleanSuite for macOS – 系統清理工具</title>
-    <meta name="description" content="CleanSuite 是一款 macOS 系統清理工具，提供快速清理、深度清理、瀏覽器快取清除、郵件快取清理、排程清理等功能。">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./script.js"></script>
+
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-        }
-
-        .hero-bg {
-            background: linear-gradient(135deg, #0ea5e9, #6366f1);
-        }
-
-        .lang-btn {
-            transition: 0.15s;
-        }
-
-        .lang-btn:hover {
-            opacity: 0.8;
+            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
         }
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50">
 
-    <!-- HEADER -->
-    <header class="flex justify-end px-6 py-4">
-        <a href="javascript:void(0)" onclick="switchLanguage('en')"
-            class="lang-btn text-sm text-gray-700 bg-gray-200 px-3 py-1 rounded-md">
+    <!-- Nav -->
+    <nav class="w-full bg-white shadow-sm p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">CleanSuite</h1>
+        <button onclick="switchLanguage('en')" class="text-blue-600 underline">
             English
-        </a>
-    </header>
+        </button>
+    </nav>
 
-    <!-- HERO -->
-    <section class="hero-bg text-white py-20">
-        <div class="max-w-4xl mx-auto text-center px-6">
-            <h1 class="text-4xl font-extrabold mb-4">CleanSuite for macOS</h1>
-            <p class="text-xl opacity-90">
-                一款乾淨、輕量、實用的 macOS 系統清理工具。
-            </p>
-
-            <a id="download-btn" href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                class="inline-block mt-8 bg-white text-indigo-600 font-semibold px-8 py-3 rounded-lg shadow hover:bg-gray-100 transition">
-                ⬇ 下載最新版本 <span class="latest-version"></span>
-            </a>
-        </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">主要功能 Features</h2>
-
-            <div class="grid md:grid-cols-2 gap-10">
-                <div>
-                    <h3 class="font-bold text-xl mb-2">⚡ 快速清理</h3>
-                    <p class="text-gray-600">移除一般快取、暫存檔案，恢復磁碟空間。</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl mb-2">🧹 深度清理</h3>
-                    <p class="text-gray-600">針對系統層級與大型快取資料進行深度掃描。</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl mb-2">🌐 瀏覽器清理</h3>
-                    <p class="text-gray-600">支援 Chrome、Safari、Edge 的快取清理。</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl mb-2">📨 郵件快取清理</h3>
-                    <p class="text-gray-600">清除 Mail.app 產生的大型快取。</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl mb-2">🗓 排程清理</h3>
-                    <p class="text-gray-600">設定定期排程，自動進行清理作業。</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-xl mb-2">⚙ 設定</h3>
-                    <p class="text-gray-600">提供偏好設定、語系切換等功能。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCREENSHOTS -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6">畫面預覽 Screenshots</h2>
-            <p class="text-gray-600">以下為佔位圖，可之後加入正式截圖。</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                <div class="bg-gray-200 h-64 rounded-lg"></div>
-                <div class="bg-gray-200 h-64 rounded-lg"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-10 text-center text-gray-600 text-sm">
-        <p>© 2025 CleanSuite · WEDO International Marketing Group</p>
-        <p class="mt-2">
-            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite" class="underline hover:text-gray-800">
-                GitHub 專案頁面
-            </a>
+    <!-- Hero -->
+    <section class="text-center py-20">
+        <h2 class="text-4xl font-bold mb-4">CleanSuite</h2>
+        <p class="text-gray-700 text-lg">
+            你的 macOS 系統，值得更乾淨、順暢的體驗
         </p>
+
+        <a id="download-btn" href="#"
+            class="inline-block mt-8 bg-blue-600 text-white px-8 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+            下載 CleanSuite <span class="latest-version text-yellow-300"></span>
+        </a>
+
+        <p class="mt-3 text-gray-500">
+            最新版本：<span class="latest-version font-semibold"></span>
+        </p>
+    </section>
+
+    <!-- Features -->
+    <section class="max-w-4xl mx-auto p-6 grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white shadow rounded-lg">
+            <h3 class="font-bold text-lg mb-2">快速清理</h3>
+            <p class="text-gray-600">一鍵清除系統垃圾、暫存檔案、快取。</p>
+        </div>
+
+        <div class="p-6 bg-white shadow rounded-lg">
+            <h3 class="font-bold text-lg mb-2">深度清潔</h3>
+            <p class="text-gray-600">更徹底地幫你移除舊資料與堆積檔案。</p>
+        </div>
+
+        <div class="p-6 bg-white shadow rounded-lg">
+            <h3 class="font-bold text-lg mb-2">App & Browser 清理</h3>
+            <p class="text-gray-600">清除 LINE、Mail、瀏覽器快取與記錄。</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 py-6 mt-20">
+        © 2025 CleanSuite — WEDO International Marketing Group
     </footer>
 
-    <script src="script.js"></script>
 </body>
 
 </html>
