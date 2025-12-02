@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>CleanSuite 使用教學</title>
+    <title>CleanSuite 常見問題 (FAQ)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Google Analytics -->
@@ -57,14 +57,12 @@
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="../"
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">首頁</a>
-                    <a href="./"
+                    <a href="../tutorial/"
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">使用教學</a>
-                    <a href="../faq/"
+                    <a href="./"
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">常見問題</a>
                     <a href="../changelog/"
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">更新日誌</a>
-                    <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">下載</a>
                     <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
                     <button onclick="switchLanguage()"
                         class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">EN</button>
@@ -83,14 +81,12 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
             <a href="../"
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">首頁</a>
-            <a href="./"
+            <a href="../tutorial/"
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">使用教學</a>
-            <a href="../faq/"
+            <a href="./"
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">常見問題</a>
             <a href="../changelog/"
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">更新日誌</a>
-            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">下載</a>
             <button onclick="switchLanguage()"
                 class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Switch
                 to English</button>
@@ -99,77 +95,48 @@
 
     <header class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
         <div class="max-w-4xl mx-auto text-center py-16 px-6">
-            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">CleanSuite 使用教學</h1>
-            <p class="text-gray-600 dark:text-gray-400 text-lg">快速上手指南：從安裝到進階設定</p>
+            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">常見問題 (FAQ)</h1>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">解答您對 CleanSuite 的所有疑問</p>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-8">
 
-        <!-- Section 1 -->
-        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
-            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">1.
-                下載與安裝</h2>
-            <div class="text-gray-700 dark:text-gray-300 space-y-4">
-                <p>
-                    從首頁或 GitHub Releases 下載最新的 <strong>CleanSuite-Installer.pkg</strong> 檔案。
-                </p>
-                <div class="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg border-l-4 border-blue-500">
-                    <h4 class="font-bold text-blue-700 dark:text-blue-300 mb-1">💡 提示：無法開啟應用程式？</h4>
-                    <p class="text-sm text-blue-800 dark:text-blue-200">
-                        如果 macOS 顯示「無法打開，因為它來自未識別的開發者」，請前往
-                        <strong>系統設定 > 隱私權與安全性</strong>，往下滑動並點選 <strong>「強制打開」</strong> 即可。
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2 -->
-        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
-            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">2.
-                功能模組介紹</h2>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">⚡️ 快速清理 (Quick Clean)</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">
-                        適合日常使用。快速掃描並刪除系統快取、暫存檔與日誌檔。建議每週執行一次。
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">🧹 深度清潔 (Deep Clean)</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">
-                        進行更全面的掃描，包含 Xcode 垃圾、舊的 iOS 更新檔等大型垃圾。建議每月執行一次。
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">🌐 瀏覽器清理</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">
-                        支援 Safari, Chrome, Edge。清除瀏覽紀錄、Cookies 與快取圖片，保護隱私並釋放空間。
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">📨 郵件與通訊軟體</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">
-                        清除 Mail App 下載的附件檔，以及 LINE 的快取資料（不會刪除聊天記錄）。
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3 -->
-        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
-            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">3.
-                設定自動排程</h2>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
-                不想手動清理？你可以設定自動排程，讓 CleanSuite 在背景默默為你工作。
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">1. CleanSuite 是什麼？</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                CleanSuite 是一款專為 macOS 設計的輕量級系統清理工具，提供快速清理、深度掃描、瀏覽器隱私清理等功能，幫助您釋放磁碟空間並保持系統流暢。
             </p>
-            <ol class="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-2">
-                <li>開啟 CleanSuite，點選側邊欄的 <strong>排程清理</strong>。</li>
-                <li>選擇頻率：<strong>每日</strong>、<strong>每週</strong> 或 <strong>每月</strong>。</li>
-                <li>開啟開關，系統將會自動在背景執行快速清理任務。</li>
-            </ol>
-        </section>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">2. 要怎麼下載與更新？</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                您可以直接從本網站首頁或 GitHub Releases 頁面下載最新的安裝檔。CleanSuite 內建自動檢查更新功能，有新版本時會自動通知您。
+            </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">3. 為什麼 macOS 會阻擋執行？</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                因為 CleanSuite 目前尚未加入 Apple 開發者簽名計畫。這是 macOS 的安全機制。您只需到「系統設定 > 隱私權與安全性」，點選「強制打開」即可正常使用。
+            </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">4. 未簽名版本是否安全？</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                是的，CleanSuite 是開源軟體，所有程式碼都在 GitHub 上公開透明。您可以隨時檢視原始碼以確保沒有惡意行為。
+            </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">5. 如何回報問題或提出建議？</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                歡迎到我們的 <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/issues"
+                    class="text-blue-600 dark:text-blue-400 hover:underline">GitHub Issues</a> 頁面回報 Bug 或提出新功能建議。
+            </p>
+        </div>
 
     </main>
 

@@ -5,7 +5,39 @@
     <meta charset="UTF-8" />
     <title>CleanSuite — macOS System Cleaner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXXX');
+        fbq('track', 'PageView');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <script defer src="/WEDO-Link-CleanSuite/script.js"></script>
     <style>
         body {
@@ -14,29 +46,37 @@
     </style>
 </head>
 
-<body class="bg-gray-50 flex flex-col min-h-screen">
+<body class="bg-gray-50 dark:bg-gray-900 flex flex-col min-h-screen transition-colors duration-200">
 
     <!-- Nav -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50 transition-colors duration-200">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
-                <a href="../" class="text-xl font-bold text-gray-800 hover:text-blue-600 transition">CleanSuite</a>
+                <a href="../"
+                    class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 transition">CleanSuite</a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="./" class="text-gray-600 hover:text-blue-600 transition">Home</a>
-                    <a href="../tutorial/en/" class="text-gray-600 hover:text-blue-600 transition">Tutorial</a>
-                    <a href="../changelog/en/" class="text-gray-600 hover:text-blue-600 transition">Changelog</a>
+                    <a href="./"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+                    <a href="../tutorial/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Tutorial</a>
+                    <a href="../faq/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
+                    <a href="../changelog/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Changelog</a>
                     <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                        class="text-gray-600 hover:text-blue-600 transition">Download</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Download</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
                     <button onclick="switchLanguage()"
-                        class="text-sm border border-gray-300 rounded px-3 py-1 hover:bg-gray-100 transition">中文</button>
+                        class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">中文</button>
                 </div>
 
                 <!-- Mobile Button -->
-                <div class="md:hidden flex items-center">
-                    <button onclick="toggleMenu()" class="text-gray-600 focus:outline-none">
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="toggleMenu()" class="text-gray-600 dark:text-gray-300 focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16"></path>
@@ -47,22 +87,28 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="./" class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Home</a>
-            <a href="../tutorial/en/" class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Tutorial</a>
-            <a href="../changelog/en/" class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Changelog</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+            <a href="./"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Home</a>
+            <a href="../tutorial/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Tutorial</a>
+            <a href="../faq/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">FAQ</a>
+            <a href="../changelog/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Changelog</a>
             <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Download</a>
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Download</a>
             <button onclick="switchLanguage()"
-                class="block w-full text-left py-2 px-4 text-gray-700 hover:bg-gray-50">切換至中文</button>
+                class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">切換至中文</button>
         </div>
     </nav>
 
     <!-- Hero -->
-    <header class="bg-white">
+    <header class="bg-white dark:bg-gray-800 transition-colors duration-200">
         <div class="max-w-4xl mx-auto text-center py-20 px-6">
-            <h1 class="text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">CleanSuite for macOS</h1>
-            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+            <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">CleanSuite for macOS
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
                 A lightweight system cleaning utility designed for macOS.<br>
                 Free up space, protect privacy, and keep your Mac running smoothly.
             </p>
@@ -73,84 +119,107 @@
                     Download Free <span class="latest-version text-blue-200 text-sm ml-1"></span>
                 </a>
                 <a href="../tutorial/en/"
-                    class="bg-gray-100 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 transition">
+                    class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 px-8 py-4 rounded-xl font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition">
                     View Tutorial
                 </a>
             </div>
-            <p class="mt-4 text-sm text-gray-500">Supports macOS 13.0 (Ventura) and later</p>
+            <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">Supports macOS 13.0 (Ventura) and later</p>
         </div>
     </header>
 
-    <!-- Features -->
-    <section class="py-20 bg-gray-50">
+    <!-- Features Demo -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Powerful Features, Simple to Use</h2>
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800 dark:text-white">Powerful Features, Simple to
+                Use</h2>
 
-            <div class="grid md:grid-cols-3 gap-10">
-                <!-- Feature 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-2xl">⚡️
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Quick Clean</h3>
-                    <p class="text-gray-600 leading-relaxed">Instantly remove system temp files, caches, and logs to
-                        free up disk space.</p>
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Quick Clean -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">⚡️</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Quick Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Instantly remove system temp files, caches, and
+                        logs.</p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6 text-2xl">🧹
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Deep Clean</h3>
-                    <p class="text-gray-600 leading-relaxed">Scan deep into the system to find forgotten large files and
-                        old data.</p>
+                <!-- Deep Clean -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">🧹</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Deep Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Scan deep into the system to find forgotten
+                        large files.</p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-2xl">🛡
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Privacy Protection</h3>
-                    <p class="text-gray-600 leading-relaxed">Clear caches and history from browsers (Safari, Chrome) and
-                        messengers (LINE).</p>
+                <!-- Browser Clean -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Browser Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Clear caches and history from Safari, Chrome,
+                        and Edge.</p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 text-2xl">🗓
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Auto Scheduler</h3>
-                    <p class="text-gray-600 leading-relaxed">Set up daily, weekly, or monthly automatic cleaning for
-                        hands-free maintenance.</p>
+                <!-- LINE Clean -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">💬</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">LINE Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Remove massive caches from LINE without deleting
+                        chats.</p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6 text-2xl">📨</div>
-                    <h3 class="text-xl font-bold mb-3">Mail Cleanup</h3>
-                    <p class="text-gray-600 leading-relaxed">Specifically target attachments and caches from the macOS
-                        Mail app.</p>
+                <!-- Mail Clean -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">📬</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Mail Clean</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Clear attachments and caches from the macOS Mail
+                        app.</p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 text-2xl">⚙️
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Personalization</h3>
-                    <p class="text-gray-600 leading-relaxed">Customize cleaning rules and notification preferences to
-                        suit your needs.</p>
+                <!-- Scheduler -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">🗓</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Scheduler</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Automate daily, weekly, or monthly cleaning
+                        tasks.</p>
                 </div>
+
+                <!-- Dashboard -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Dashboard</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Visualize disk usage and cleaning history at a
+                        glance.</p>
+                </div>
+
+                <!-- Settings -->
+                <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">⚙️</div>
+                    <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white">Personalization</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Customize cleaning rules and notification
+                        preferences.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t mt-auto">
+    <footer class="bg-white dark:bg-gray-800 border-t dark:border-gray-700 mt-auto">
         <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-500 text-sm">© 2025 CleanSuite · WEDO International Marketing Group</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">© 2025 CleanSuite · WEDO International Marketing Group
+            </p>
             <div class="flex space-x-6 mt-4 md:mt-0">
                 <a href="https://github.com/hjuming/WEDO-Link-CleanSuite"
-                    class="text-gray-400 hover:text-gray-600 transition">GitHub</a>
-                <a href="../changelog/en/" class="text-gray-400 hover:text-gray-600 transition">Changelog</a>
+                    class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">GitHub</a>
+                <a href="../changelog/en/"
+                    class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">Changelog</a>
             </div>
         </div>
     </footer>

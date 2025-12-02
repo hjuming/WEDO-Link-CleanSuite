@@ -5,7 +5,39 @@
     <meta charset="UTF-8" />
     <title>CleanSuite Changelog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'XXXXXXXXXXXXXXXX');
+        fbq('track', 'PageView');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <script defer src="/WEDO-Link-CleanSuite/script.js"></script>
     <style>
         body {
@@ -14,25 +46,32 @@
     </style>
 </head>
 
-<body class="bg-gray-50 flex flex-col min-h-screen">
+<body class="bg-gray-50 dark:bg-gray-900 flex flex-col min-h-screen transition-colors duration-200">
 
     <!-- Nav -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50 transition-colors duration-200">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <a href="../../en/"
-                    class="text-xl font-bold text-gray-800 hover:text-blue-600 transition">CleanSuite</a>
+                    class="text-xl font-bold text-gray-800 dark:text-white hover:text-blue-600 transition">CleanSuite</a>
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="../../en/" class="text-gray-600 hover:text-blue-600 transition">Home</a>
-                    <a href="../../tutorial/en/" class="text-gray-600 hover:text-blue-600 transition">Tutorial</a>
-                    <a href="./" class="text-gray-600 hover:text-blue-600 transition">Changelog</a>
+                    <a href="../../en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
+                    <a href="../../tutorial/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Tutorial</a>
+                    <a href="../../faq/en/"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
+                    <a href="./"
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Changelog</a>
                     <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                        class="text-gray-600 hover:text-blue-600 transition">Download</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Download</a>
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
                     <button onclick="switchLanguage()"
-                        class="text-sm border border-gray-300 rounded px-3 py-1 hover:bg-gray-100 transition">中文</button>
+                        class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">中文</button>
                 </div>
-                <div class="md:hidden flex items-center">
-                    <button onclick="toggleMenu()" class="text-gray-600 focus:outline-none">
+                <div class="md:hidden flex items-center space-x-4">
+                    <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
+                    <button onclick="toggleMenu()" class="text-gray-600 dark:text-gray-300 focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16"></path>
@@ -41,47 +80,56 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="../../en/" class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Home</a>
-            <a href="../../tutorial/en/" class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Tutorial</a>
-            <a href="./" class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Changelog</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+            <a href="../../en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Home</a>
+            <a href="../../tutorial/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Tutorial</a>
+            <a href="../../faq/en/"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">FAQ</a>
+            <a href="./"
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Changelog</a>
             <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                class="block py-2 px-4 text-gray-700 hover:bg-gray-50">Download</a>
+                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Download</a>
             <button onclick="switchLanguage()"
-                class="block w-full text-left py-2 px-4 text-gray-700 hover:bg-gray-50">切換至中文</button>
+                class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">切換至中文</button>
         </div>
     </nav>
 
-    <header class="bg-white border-b">
+    <header class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
         <div class="max-w-4xl mx-auto text-center py-16 px-6">
-            <h1 class="text-4xl font-bold mb-4 text-gray-900">Changelog</h1>
-            <p class="text-gray-600 text-lg">Track the latest updates and improvements of CleanSuite</p>
+            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Changelog</h1>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">Track the latest updates and improvements of CleanSuite
+            </p>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-6 py-12 space-y-8">
 
+        <!-- Dynamic Changelog Container -->
+        <div id="changelog-container"></div>
+
         <!-- v1.2.1 -->
-        <div class="bg-white p-8 shadow-sm rounded-2xl border-l-4 border-blue-500">
+        <div
+            class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl border-l-4 border-gray-300 dark:border-gray-600">
             <div class="flex justify-between items-start mb-4">
                 <div>
-                    <h2 class="text-2xl font-bold text-gray-800">v1.2.1</h2>
-                    <p class="text-gray-500 text-sm mt-1">2025-12-02</p>
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">v1.2.1</h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">2025-12-02</p>
                 </div>
-                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Latest</span>
             </div>
 
             <div class="space-y-4">
                 <div>
-                    <h3 class="font-bold text-gray-700 mb-2">✨ New Features</h3>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                    <h3 class="font-bold text-gray-700 dark:text-gray-300 mb-2">✨ New Features</h3>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
                         <li>Added official GitHub Pages website and documentation.</li>
                         <li>Added automatic update check (Sparkle Appcast).</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold text-gray-700 mb-2">🛠 Fixes & Improvements</h3>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                    <h3 class="font-bold text-gray-700 dark:text-gray-300 mb-2">🛠 Fixes & Improvements</h3>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
                         <li>Fixed GitHub Actions build process and Swift version compatibility.</li>
                         <li>Optimized project structure and removed redundant files.</li>
                         <li>Updated README.md with comprehensive development and installation guide.</li>
@@ -91,18 +139,19 @@
         </div>
 
         <!-- v1.1.0 -->
-        <div class="bg-white p-8 shadow-sm rounded-2xl border-l-4 border-gray-300">
+        <div
+            class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl border-l-4 border-gray-300 dark:border-gray-600">
             <div class="flex justify-between items-start mb-4">
                 <div>
-                    <h2 class="text-2xl font-bold text-gray-800">v1.1.0</h2>
-                    <p class="text-gray-500 text-sm mt-1">2025-12-01</p>
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white">v1.1.0</h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">2025-12-01</p>
                 </div>
             </div>
 
             <div class="space-y-4">
                 <div>
-                    <h3 class="font-bold text-gray-700 mb-2">✨ New Features</h3>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                    <h3 class="font-bold text-gray-700 dark:text-gray-300 mb-2">✨ New Features</h3>
+                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1">
                         <li>Brand new SwiftUI interface integrating all cleaning modules.</li>
                         <li>Added "Dashboard" to display disk usage.</li>
                         <li>Added "Settings" panel for custom cleaning preferences.</li>
@@ -114,9 +163,10 @@
 
     </main>
 
-    <footer class="bg-white border-t mt-auto">
+    <footer class="bg-white dark:bg-gray-800 border-t dark:border-gray-700 mt-auto">
         <div class="max-w-6xl mx-auto px-6 py-10 text-center">
-            <p class="text-gray-500 text-sm">© 2025 CleanSuite · WEDO International Marketing Group</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">© 2025 CleanSuite · WEDO International Marketing Group
+            </p>
         </div>
     </footer>
 

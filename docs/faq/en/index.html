@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>CleanSuite Tutorial</title>
+    <title>CleanSuite FAQ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Google Analytics -->
@@ -57,14 +57,12 @@
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="../../en/"
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Home</a>
-                    <a href="./"
+                    <a href="../../tutorial/en/"
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Tutorial</a>
-                    <a href="../../faq/en/"
+                    <a href="./"
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
                     <a href="../../changelog/en/"
                         class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Changelog</a>
-                    <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                        class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Download</a>
                     <button onclick="toggleDarkMode()" class="theme-toggle-icon text-xl">🌙</button>
                     <button onclick="switchLanguage()"
                         class="text-sm border border-gray-300 dark:border-gray-600 rounded px-3 py-1 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition">中文</button>
@@ -83,14 +81,12 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
             <a href="../../en/"
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Home</a>
-            <a href="./"
+            <a href="../../tutorial/en/"
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Tutorial</a>
-            <a href="../../faq/en/"
+            <a href="./"
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">FAQ</a>
             <a href="../../changelog/en/"
                 class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Changelog</a>
-            <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/releases/latest"
-                class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">Download</a>
             <button onclick="switchLanguage()"
                 class="block w-full text-left py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">切換至中文</button>
         </div>
@@ -98,80 +94,54 @@
 
     <header class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
         <div class="max-w-4xl mx-auto text-center py-16 px-6">
-            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">CleanSuite Tutorial</h1>
-            <p class="text-gray-600 dark:text-gray-400 text-lg">Quick Start Guide: From Installation to Advanced
-                Settings</p>
+            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Frequently Asked Questions</h1>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">Answers to common questions about CleanSuite</p>
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-12">
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-8">
 
-        <!-- Section 1 -->
-        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
-            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">1.
-                Download & Install</h2>
-            <div class="text-gray-700 dark:text-gray-300 space-y-4">
-                <p>
-                    Download the latest <strong>CleanSuite-Installer.pkg</strong> from the Home page or GitHub Releases.
-                </p>
-                <div class="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg border-l-4 border-blue-500">
-                    <h4 class="font-bold text-blue-700 dark:text-blue-300 mb-1">💡 Tip: Cannot Open App?</h4>
-                    <p class="text-sm text-blue-800 dark:text-blue-200">
-                        If macOS says "Cannot be opened because it is from an unidentified developer", go to
-                        <strong>System Settings > Privacy & Security</strong>, scroll down, and click <strong>"Open
-                            Anyway"</strong>.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2 -->
-        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
-            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">2.
-                Features Overview</h2>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">⚡️ Quick Clean</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">
-                        Best for daily use. Scans and removes system caches, temp files, and logs. Recommended weekly.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">🧹 Deep Clean</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">
-                        Performs a comprehensive scan, including Xcode junk, old iOS updates, and large files.
-                        Recommended monthly.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">🌐 Browser Cleanup</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">
-                        Supports Safari, Chrome, Edge. Clears history, cookies, and cached images to protect privacy.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-2 text-gray-800 dark:text-white">📨 Mail & Messengers</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">
-                        Clears attachments downloaded by Mail App and caches from LINE (does not delete chat history).
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3 -->
-        <section class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
-            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white border-b dark:border-gray-700 pb-2">3.
-                Setting up Auto Scheduler</h2>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
-                Don't want to clean manually? Set up an automatic schedule to let CleanSuite work in the background.
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">1. What is CleanSuite?</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                CleanSuite is a lightweight system cleaning utility designed for macOS. It provides Quick Clean, Deep
+                Clean, and privacy cleaning features to free up disk space and keep your system running smoothly.
             </p>
-            <ol class="list-decimal list-inside text-gray-700 dark:text-gray-300 space-y-2 ml-2">
-                <li>Open CleanSuite and click <strong>Scheduler</strong> in the sidebar.</li>
-                <li>Choose frequency: <strong>Daily</strong>, <strong>Weekly</strong>, or <strong>Monthly</strong>.</li>
-                <li>Toggle the switch on. The system will automatically run Quick Clean tasks.</li>
-            </ol>
-        </section>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">2. How do I download and update it?</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                You can download the latest installer directly from our homepage or GitHub Releases. CleanSuite includes
+                an automatic update checker that will notify you when a new version is available.
+            </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">3. Why does macOS block the app?</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                Because CleanSuite is not yet notarized by Apple. This is a standard macOS security feature. You can
+                simply go to "System Settings > Privacy & Security" and click "Open Anyway" to run it.
+            </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">4. Is the unsigned version safe?</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                Yes, CleanSuite is open-source software. All code is transparently available on GitHub, so you can
+                verify that there is no malicious behavior.
+            </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-8 shadow-sm rounded-2xl">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">5. How can I submit feedback or bug
+                reports?</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+                Please visit our <a href="https://github.com/hjuming/WEDO-Link-CleanSuite/issues"
+                    class="text-blue-600 dark:text-blue-400 hover:underline">GitHub Issues</a> page to report bugs or
+                suggest new features.
+            </p>
+        </div>
 
     </main>
 
