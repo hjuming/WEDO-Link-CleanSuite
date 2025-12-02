@@ -4,6 +4,7 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key> <string>CleanSuite</string>
+    <key>CFBundleIconName</key> <string>AppIcon</string>
     <key>CFBundleIdentifier</key> <string>com.wedo.cleansuite</string>
     <key>CFBundleExecutable</key> <string>CleanSuite</string>
     <key>CFBundlePackageType</key> <string>APPL</string>

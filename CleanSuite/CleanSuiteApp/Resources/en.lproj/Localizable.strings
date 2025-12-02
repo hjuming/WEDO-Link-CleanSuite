@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  CleanSuite
+
+  Created by CleanSuite on 2025/12/02.
+*/
+
+/* Sidebar Sections */
+"Overview" = "Overview";
+"Cleaning" = "Cleaning";
+"Tools" = "Tools";
+
+/* Sidebar Items */
+"Dashboard" = "Dashboard";
+"Quick Clean" = "Quick Clean";
+"Deep Clean" = "Deep Clean";
+"Mail Clean" = "Mail Clean";
+"Browser Clean" = "Browser Clean";
+"LINE Clean" = "LINE Clean";
+"Scheduler" = "Scheduler";
+"Settings" = "Settings";
+
+/* Dashboard */
+"Macintosh HD" = "Macintosh HD";
+"External Drive" = "External Drive";
