@@ -1,165 +1,148 @@
 # CleanSuite
 
+[![English](https://img.shields.io/badge/lang-English-blue.svg)](README_EN.md)
+
 ![Platform](https://img.shields.io/badge/Platform-macOS-lightgrey.svg)
 ![macOS](https://img.shields.io/badge/macOS-13.0%2B-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Build Status](https://github.com/hjuming/WEDO-Link-CleanSuite/actions/workflows/build.yml/badge.svg)
 
-**CleanSuite** is a modern, lightweight system maintenance utility designed for macOS. Built entirely with **SwiftUI**, it provides a sleek and intuitive interface for managing system storage, cleaning caches, and optimizing performance.
+**CleanSuite** 是一款專為 macOS 設計的現代化輕量級系統維護工具。完全使用 **SwiftUI** 構建，提供流暢直觀的介面，用於管理系統儲存空間、清理快取並優化效能。
 
-> **Note**: This project is currently in **v1.2.1**. The UI modules are fully implemented, while the core cleaning logic and system scanning engines are under active development for future releases.
+> **注意**：本專案目前處於 **v1.2.1** 版本。UI 模組已完全實作，核心清理邏輯和系統掃描引擎正在積極開發中，將於未來版本發布。
 
 ---
 
-## 🚀 Features
+## 🚀 功能特色
 
-CleanSuite is modularized into several key components to ensure maintainability and scalability.
+CleanSuite 模組化為幾個關鍵組件，以確保可維護性和擴展性。
 
-| Module | Description |
+| 模組 | 描述 |
 | :--- | :--- |
-| **Dashboard** | Overview of system health, storage usage, and quick actions. |
-| **Quick Clean** | Fast scanning and removal of common temporary files and caches. |
-| **Deep Clean** | Thorough system scan for large files, old logs, and redundant data. |
-| **Browser Clean** | specialized cleaning for Safari, Chrome, and Firefox caches/history. |
-| **Mail Clean** | Removal of local mail attachments and unnecessary downloads. |
-| **LINE Clean** | Targeted cleaning for LINE application caches and temporary files. |
-| **Scheduler** | Automation settings for periodic background cleaning tasks. |
-| **Settings** | User preferences for app behavior, notifications, and updates. |
+| **儀表板 (Dashboard)** | 系統健康狀況、儲存空間使用量和快速操作的總覽。 |
+| **快速清理 (Quick Clean)** | 快速掃描並移除常見的暫存檔案和快取。 |
+| **深度清理 (Deep Clean)** | 徹底掃描系統中的大型檔案、舊日誌和冗餘資料。 |
+| **瀏覽器清理 (Browser Clean)** | 專門針對 Safari、Chrome 和 Firefox 的快取/歷史記錄進行清理。 |
+| **郵件清理 (Mail Clean)** | 移除本機郵件附件和不必要的下載項目。 |
+| **LINE 清理 (LINE Clean)** | 針對 LINE 應用程式快取和暫存檔案的定向清理。 |
+| **排程器 (Scheduler)** | 設定定期背景清理任務的自動化選項。 |
+| **設定 (Settings)** | 應用程式行為、通知和更新的使用者偏好設定。 |
 
-### Core Components
-- **CleanSuiteApp**: The main macOS application target containing all SwiftUI views and logic.
-- **CleanSuiteHelper**: A helper module for privileged system operations (future implementation).
-- **Shared**: Common utilities and data models shared across targets.
-
----
-
-## 📥 Installation
-
-### Download from Releases
-You can download the latest stable version (`.pkg` installer) from the [GitHub Releases](https://github.com/hjuming/WEDO-Link-CleanSuite/releases) page.
-
-### Installation Steps
-1. Download `CleanSuite.pkg` from the latest release.
-2. Double-click the `.pkg` file to launch the installer.
-3. Follow the on-screen instructions to install CleanSuite to your `/Applications` folder.
-
-> **⚠️ Important Note on Security**:
-> Since this app is currently **unsigned** (not notarized by Apple), you may see a security warning when opening it for the first time.
->
-> **To bypass this:**
-> 1. Right-click (or Control-click) on `CleanSuite.app` in your Applications folder.
-> 2. Select **Open** from the context menu.
-> 3. Click **Open** in the dialog box that appears.
->
-> You only need to do this once.
+### 核心組件
+- **CleanSuiteApp**: 包含所有 SwiftUI 視圖和邏輯的主要 macOS 應用程式目標。
+- **CleanSuiteHelper**: 用於特權系統操作的輔助模組（未來實作）。
+- **Shared**: 跨目標共用的通用工具和資料模型。
 
 ---
 
-## 🛠 Development Setup
+## 📥 安裝說明
 
-If you wish to contribute or build the project from source, follow these steps.
+### 從 Releases 下載
+您可以從 [GitHub Releases](https://github.com/hjuming/WEDO-Link-CleanSuite/releases) 頁面下載最新的穩定版本（`.pkg` 安裝程式）。
 
-### Prerequisites
-- **macOS 13.0** (Ventura) or later
-- **Xcode 14.2+** (Recommended: Xcode 16.0+)
+### 安裝步驟
+1. 從最新版本下載 `CleanSuite.pkg`。
+2. 雙擊 `.pkg` 檔案啟動安裝程式。
+3. 按照螢幕上的指示將 CleanSuite 安裝到您的 `/Applications` 資料夾。
+
+### 🔐 安全性注意事項 (未簽署版本)
+由於此應用程式目前**未簽署**（未經 Apple 公證），首次開啟時您可能會看到安全性警告。
+
+**繞過此警告的方法：**
+1. 在應用程式資料夾中的 `CleanSuite.app` 上按右鍵（或 Control-點擊）。
+2. 從選單中選擇 **打開 (Open)**。
+3. 在出現的對話框中點擊 **打開 (Open)**。
+
+> 您只需要執行一次此操作，之後即可正常開啟。
+
+---
+
+## 📘 文件網站 (GitHub Pages)
+
+我們提供了完整的線上文件網站，包含詳細的使用教學、常見問題和更新日誌。
+
+- **[中文文件](https://hjuming.github.io/WEDO-Link-CleanSuite/)**
+- **[English Documentation](https://hjuming.github.io/WEDO-Link-CleanSuite/en/)**
+
+---
+
+## 🛠 開發設定
+
+如果您希望貢獻程式碼或從原始碼建置專案，請按照以下步驟操作。
+
+### 先決條件
+- **macOS 13.0** (Ventura) 或更高版本
+- **Xcode 14.2+** (建議使用 Xcode 16.0+)
 - **Swift 5.0+**
 
-### Getting Started
-1. **Clone the repository**:
+### 開始使用
+1. **複製儲存庫**：
    ```bash
    git clone https://github.com/hjuming/WEDO-Link-CleanSuite.git
    cd WEDO-Link-CleanSuite
    ```
 
-2. **Open the Project**:
-   Double-click `CleanSuite/CleanSuite.xcodeproj` to open it in Xcode.
+2. **開啟專案**：
+   雙擊 `CleanSuite/CleanSuite.xcodeproj` 在 Xcode 中開啟。
 
-3. **Build Settings**:
+3. **建置設定**：
    - **Target**: `CleanSuite`
    - **Deployment Target**: macOS 13.0
    - **Swift Version**: 5.0
    - **Signing**: Manual (Code Sign Identity: `-`)
 
-4. **Run**:
-   Select the `CleanSuite` scheme and press `Cmd + R` to build and run.
+4. **執行**：
+   選擇 `CleanSuite` scheme 並按下 `Cmd + R` 進行建置和執行。
 
 ---
 
-## 📂 Project Structure
+## 🤖 CI/CD 建置流程
 
-```text
-CleanSuite/
-├── CleanSuite.xcodeproj       # Xcode Project File
-├── CleanSuiteApp/             # Main Application Source
-│   ├── CleanSuiteApp.swift    # App Entry Point (@main)
-│   ├── ContentView.swift      # Root View
-│   ├── DashboardView.swift    # Dashboard UI
-│   ├── QuickCleanView.swift   # Quick Clean UI
-│   ├── ... (Other Views)
-│   ├── Assets.xcassets/       # App Icons and Images
-│   └── Info.plist             # App Configuration
-├── CleanSuiteHelper/          # Helper Module Source
-│   └── Helper.swift
-├── shared/                    # Shared Code
-│   └── Shared.swift
-├── CLI/                       # Command Line Tools
-│   └── cleansuite
-├── Package.swift              # Swift Package Definition
-└── README.md                  # Project Documentation
-```
+本專案使用 **GitHub Actions** 進行持續整合和部署。
 
----
-
-## 🤖 Build & Release Automation
-
-This project uses **GitHub Actions** for continuous integration and deployment.
-
-- **Workflow File**: `.github/workflows/build.yml`
+- **Workflow 檔案**: `.github/workflows/build.yml`
 - **Runner**: `macos-15-arm64` (Apple Silicon)
 
-### Workflow Steps
-1. **Checkout Code**: Pulls the latest code from the repository.
-2. **Setup Xcode**: Selects the appropriate Xcode version.
-3. **Build**: Uses `xcodebuild` to compile the `CleanSuite` scheme in `Release` configuration.
-   ```bash
-   xcodebuild -project CleanSuite/CleanSuite.xcodeproj -scheme CleanSuite -configuration Release ...
-   ```
-4. **Package**: Creates a standard macOS installer package (`CleanSuite.pkg`) using `productbuild`.
-5. **Release**: Automatically uploads the `.pkg` file to GitHub Releases when a tag starting with `v*` is pushed.
+### Workflow 步驟
+1. **Checkout Code**: 從儲存庫拉取最新程式碼。
+2. **Setup Xcode**: 選擇適當的 Xcode 版本。
+3. **Build**: 使用 `xcodebuild` 在 `Release` 設定下編譯 `CleanSuite` scheme。
+4. **Package**: 使用 `productbuild` 建立標準 macOS 安裝套件 (`CleanSuite.pkg`)。
+5. **Release**: 當推送以 `v*` 開頭的標籤時，自動將 `.pkg` 檔案上傳至 GitHub Releases。
 
 ---
 
-## 🔖 Versioning
+## 🔖 版本控制
 
-CleanSuite follows [Semantic Versioning](https://semver.org/).
-- **Current Version**: `v1.2.1`
-- **Format**: `vMajor.Minor.Patch`
+CleanSuite 遵循 [語意化版本控制 (Semantic Versioning)](https://semver.org/)。
+- **目前版本**: `v1.2.1`
+- **格式**: `vMajor.Minor.Patch`
 
-To release a new version:
+發布新版本：
 ```bash
 git tag v1.3.0
 git push origin v1.3.0
 ```
-This will trigger the GitHub Actions workflow to build and publish the new release.
+這將觸發 GitHub Actions workflow 建置並發布新版本。
 
 ---
 
-## 🗺 Roadmap
+## 🗺 路線圖 (Roadmap)
 
-- [x] **v1.0**: Initial Project Structure & UI Framework
-- [x] **v1.2**: Complete SwiftUI Interface Implementation
-- [ ] **v1.3**: Core Cleaning Engine Implementation
-- [ ] **v1.4**: System Scanning Logic & Deep Clean
-- [ ] **v1.5**: Scheduler & Automation Features
-- [ ] **v2.0**: Cloud Sync & Preferences
-- [ ] **Future**: Notarization & Signed Distribution
+- [x] **v1.0**: 初始專案結構與 UI 框架
+- [x] **v1.2**: 完成 SwiftUI 介面實作
+- [ ] **v1.3**: 核心清理引擎實作
+- [ ] **v1.4**: 系統掃描邏輯與深度清理
+- [ ] **v1.5**: 排程器與自動化功能
+- [ ] **v2.0**: 雲端同步與偏好設定
+- [ ] **未來**: 公證與簽署發布
 
 ---
 
-## 📄 License
+## 📄 授權條款
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+本專案採用 **MIT License** 授權。詳情請參閱 [LICENSE](LICENSE) 檔案。
 
 ---
 
