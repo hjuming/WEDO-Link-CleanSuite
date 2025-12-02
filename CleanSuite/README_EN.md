@@ -10,7 +10,7 @@
 
 **CleanSuite** is a modern, lightweight system maintenance utility designed for macOS. Built entirely with **SwiftUI**, it provides a sleek and intuitive interface for managing system storage, cleaning caches, and optimizing performance.
 
-> **Note**: This project is currently in **v1.2.1**. The UI modules are fully implemented, while the core cleaning logic and system scanning engines are under active development for future releases.
+> **Note**: This project is currently in **v1.2.2**. The UI modules are fully implemented, while the core cleaning logic and system scanning engines are under active development for future releases.
 
 ---
 
@@ -116,7 +116,7 @@ This project uses **GitHub Actions** for continuous integration and deployment.
 ## 🔖 Versioning
 
 CleanSuite follows [Semantic Versioning](https://semver.org/).
-- **Current Version**: `v1.2.1`
+- **Current Version**: `v1.2.2`
 - **Format**: `vMajor.Minor.Patch`
 
 To release a new version:
