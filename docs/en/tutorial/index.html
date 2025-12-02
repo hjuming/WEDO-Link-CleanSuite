@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CleanSuite Tutorial — Quick Start Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="../script.js"></script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Nav -->
+    <nav class="w-full bg-white shadow-sm p-4 flex justify-between items-center">
+        <a href="../" class="text-xl font-bold">CleanSuite</a>
+        <button onclick="switchLanguage('zh')" class="text-blue-600 underline">中文</button>
+    </nav>
+
+    <header class="text-center py-16">
+        <h1 class="text-4xl font-bold mb-4">CleanSuite Tutorial</h1>
+        <p class="text-gray-600 text-lg">Learn how to optimize your macOS system easily</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 space-y-12">
+
+        <!-- Section 1 -->
+        <section class="bg-white p-6 shadow rounded-lg">
+            <h2 class="text-2xl font-bold mb-3">1. Install CleanSuite</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Download the <strong>.pkg</strong> installer from the official website and follow the installation
+                steps.
+                Once installed, you will find CleanSuite in your Applications folder.
+            </p>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="bg-white p-6 shadow rounded-lg">
+            <h2 class="text-2xl font-bold mb-3">2. Main Interface Overview</h2>
+
+            <ul class="list-disc text-gray-700 pl-6 space-y-2">
+                <li><strong>Quick Clean:</strong> Remove cache, logs, and temp files.</li>
+                <li><strong>Deep Clean:</strong> More thorough cleanup for heavy users.</li>
+                <li><strong>App Cleaning:</strong> Clear LINE, Mail, Safari/Chrome data.</li>
+                <li><strong>Scheduler:</strong> Automate daily/weekly/monthly cleanups.</li>
+                <li><strong>Settings:</strong> Customize preferences & cleanup levels.</li>
+            </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="bg-white p-6 shadow rounded-lg">
+            <h2 class="text-2xl font-bold mb-3">3. Cleaning Modes</h2>
+
+            <div class="space-y-3 text-gray-700">
+                <p><strong>Quick Clean:</strong> Recommended daily or during work days.</p>
+                <p><strong>Deep Clean:</strong> Recommended weekly or monthly.</p>
+                <p><strong>App Cleaning:</strong> Use when LINE or Mail consumes too much space.</p>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="bg-white p-6 shadow rounded-lg">
+            <h2 class="text-2xl font-bold mb-3">4. Scheduler Setup</h2>
+
+            <p class="text-gray-700 leading-relaxed">
+                Open CleanSuite → Go to <strong>Scheduler</strong> → Choose frequency (daily/weekly/monthly).
+                macOS will automatically run cleanup tasks in the background.
+            </p>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="bg-white p-6 shadow rounded-lg">
+            <h2 class="text-2xl font-bold mb-3">5. Frequently Asked Questions</h2>
+
+            <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                <li><strong>Q: Why is the freed space small?</strong><br>It may indicate your system is already clean.
+                    Try Deep Clean.</li>
+                <li><strong>Q: LINE/Mail cleanup incomplete?</strong><br>Please fully quit the app and try again.</li>
+                <li><strong>Q: Scheduler not working?</strong><br>Ensure macOS background permissions are allowed and
+                    the Mac is not fully shut down.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-gray-500 py-12">
+        © 2025 CleanSuite — WEDO International Marketing Group
+    </footer>
+
+</body>
+
+</html>
