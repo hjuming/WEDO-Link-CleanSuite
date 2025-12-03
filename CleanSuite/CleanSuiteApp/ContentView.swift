@@ -5,6 +5,7 @@ struct ContentView: View {
     
     enum Panel: Hashable {
         case dashboard
+        case systemScan
         case quickClean
         case deepClean
         case mailClean
@@ -24,6 +25,9 @@ struct ContentView: View {
                 }
                 
                 Section(header: Text("Cleaning")) {
+                    NavigationLink(value: Panel.systemScan) {
+                        Label("Smart System Scan", systemImage: "waveform.circle")
+                    }
                     NavigationLink(value: Panel.quickClean) {
                         Label("Quick Clean", systemImage: "bolt.fill")
                     }
@@ -55,6 +59,7 @@ struct ContentView: View {
         } detail: {
             switch selection {
             case .dashboard: DashboardView()
+            case .systemScan: SystemScanView()
             case .quickClean: QuickCleanView()
             case .deepClean: DeepCleanView()
             case .mailClean: MailCleanView()

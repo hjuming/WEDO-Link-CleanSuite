@@ -23,6 +23,11 @@
 
 		F11SHARED = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		F12HELPER = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		F_SYSTEM_SCANNER = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemScanner.swift; sourceTree = "<group>"; };
+		F_CLEAN_REPORT = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanReport.swift; sourceTree = "<group>"; };
+		F_SCAN_HELPER = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHelper.swift; sourceTree = "<group>"; };
+		F_SYSTEM_SCAN_VIEW = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemScanView.swift; sourceTree = "<group>"; };
+		F_CLEAN_REPORT_VIEW = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanReportView.swift; sourceTree = "<group>"; };
 
 		F13ASSETS = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F14PLIST = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +68,10 @@
 				F9SCHEDULER,
 				F10SETTINGS,
 				F13ASSETS,
+				F13ASSETS,
 				F14PLIST,
+				F_SYSTEM_SCAN_VIEW,
+				F_CLEAN_REPORT_VIEW,
 			);
 		};
 
@@ -71,14 +79,14 @@
 			isa = PBXGroup;
 			path = shared;
 			sourceTree = "<group>";
-			children = ( F11SHARED );
+			children = ( F11SHARED, F_SYSTEM_SCANNER, F_CLEAN_REPORT );
 		};
 
 		GHELPER = {
 			isa = PBXGroup;
 			path = CleanSuiteHelper;
 			sourceTree = "<group>";
-			children = ( F12HELPER );
+			children = ( F12HELPER, F_SCAN_HELPER );
 		};
 
 /* ================ BUILD FILES ================ */
@@ -96,6 +104,11 @@
 
 		B11SHARED = { isa = PBXBuildFile; fileRef = F11SHARED; };
 		B12HELPER = { isa = PBXBuildFile; fileRef = F12HELPER; };
+		B_SYSTEM_SCANNER = { isa = PBXBuildFile; fileRef = F_SYSTEM_SCANNER; };
+		B_CLEAN_REPORT = { isa = PBXBuildFile; fileRef = F_CLEAN_REPORT; };
+		B_SCAN_HELPER = { isa = PBXBuildFile; fileRef = F_SCAN_HELPER; };
+		B_SYSTEM_SCAN_VIEW = { isa = PBXBuildFile; fileRef = F_SYSTEM_SCAN_VIEW; };
+		B_CLEAN_REPORT_VIEW = { isa = PBXBuildFile; fileRef = F_CLEAN_REPORT_VIEW; };
 
 		BASSETS = { isa = PBXBuildFile; fileRef = F13ASSETS; };
 
@@ -116,6 +129,11 @@
 				B10SETTINGS,
 				B11SHARED,
 				B12HELPER,
+				B_SYSTEM_SCANNER,
+				B_CLEAN_REPORT,
+				B_SCAN_HELPER,
+				B_SYSTEM_SCAN_VIEW,
+				B_CLEAN_REPORT_VIEW,
 			);
 		};
 

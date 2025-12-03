@@ -10,7 +10,7 @@
 
 **CleanSuite** is a modern, lightweight system maintenance utility designed for macOS. Built entirely with **SwiftUI**, it provides a sleek and intuitive interface for managing system storage, cleaning caches, and optimizing performance.
 
-> **Note**: This project is currently in **v1.2.2**. The UI modules are fully implemented, while the core cleaning logic and system scanning engines are under active development for future releases.
+> **Note**: This project is currently in **v1.3.0**. Core cleaning logic and system scanning engines are now implemented, along with App Dock icon support.
 
 ---
 
@@ -21,6 +21,8 @@ CleanSuite is modularized into several key components to ensure maintainability 
 | Module | Description |
 | :--- | :--- |
 | **Dashboard** | Overview of system health, storage usage, and quick actions. |
+| **Smart System Scan** | New system scanning engine for caches, logs, Trash, and Xcode DerivedData. |
+| **Clean Report** | Detailed report of freed space after cleaning. |
 | **Quick Clean** | Fast scanning and removal of common temporary files and caches. |
 | **Deep Clean** | Thorough system scan for large files, old logs, and redundant data. |
 | **Browser Clean** | Specialized cleaning for Safari, Chrome, and Firefox caches/history. |
@@ -116,7 +118,7 @@ This project uses **GitHub Actions** for continuous integration and deployment.
 ## 🔖 Versioning
 
 CleanSuite follows [Semantic Versioning](https://semver.org/).
-- **Current Version**: `v1.2.2`
+- **Current Version**: `v1.3.0`
 - **Format**: `vMajor.Minor.Patch`
 
 To release a new version:
@@ -132,7 +134,7 @@ This will trigger the GitHub Actions workflow to build and publish the new relea
 
 - [x] **v1.0**: Initial Project Structure & UI Framework
 - [x] **v1.2**: Complete SwiftUI Interface Implementation
-- [ ] **v1.3**: Core Cleaning Engine Implementation
+- [x] **v1.3**: Core Cleaning Engine Implementation (Smart Scan & Clean Report)
 - [ ] **v1.4**: System Scanning Logic & Deep Clean
 - [ ] **v1.5**: Scheduler & Automation Features
 - [ ] **v2.0**: Cloud Sync & Preferences
